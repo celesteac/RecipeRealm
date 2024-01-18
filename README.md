@@ -4,9 +4,11 @@ A web-based recipe sharing app <br />
 ## Specification Deliverable
 
 ### Elevator Pitch
-This is a test <br />
+When was the last time you needed inspiration for dinner, and opened a recipe book? Probably not recently. But, when was the last time you searched the internet, or looked through your old emails or text messages, for just the right recipe? Probably recently. Recipe Realm is the perfect balance, providing an easy way to organize, access, and share your favorite online recipes. When you find a winning dish, or when your friend sends you a delicious delicacy they made recently, just add it to Recipe Realm, and soon you will have meal ideas for every occasion at your fingertips
 
 ### Design
+<img width="450" height="300" src="LoginMock.jpg"/>
+<img width="450" height="300" src="AppMock.jpg"/>
 
 ### Key Features
 - Secure Login with HTML
