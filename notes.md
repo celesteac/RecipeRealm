@@ -22,3 +22,8 @@ standard mode cannot write <br />
 escape to get back to standard mode from anywhere else <br />
 i for insert mode <br />
 insert mode cannot save <br />
+## Caddy Notes
+Caddy does 3 important things
+1. web certificates
+2. serves up static HTML files
+3. gateway for subdomain requests
