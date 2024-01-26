@@ -1,5 +1,6 @@
 # Notes
 [Readme](https://github.com/celesteac/Startup/blob/main/README.md#startup) <br />
+[How to write in Markup](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#styling-text) <br />
 My startup IP address http://23.23.184.165/
 ## Git notes
 Use git fetch to see changes on github without downloading them <br />
