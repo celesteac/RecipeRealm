@@ -28,3 +28,7 @@ Caddy does 3 important things
 1. web certificates
 2. serves up static HTML files
 3. gateway for subdomain requests
+## HTML Notes
+An HTML page is built to render just one page at a time and allow linking to other pages. When you load a new page, the whole state is dropped <br/>
+Server side rendering vs client side rendering <br/>
+Server side rendering is multiple files that the server takes, puts together, and sends off to display as one page. Client side rendering is when there is only one page, and javascript is used to dynamically change the content.
