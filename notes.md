@@ -35,7 +35,7 @@ Server side rendering is multiple files that the server takes, puts together, an
 ## CSS Notes
 Defines rules sets composed of a _selector_ to select a group of elements and one or more _delaractions_ with _properties_ and _property values_
 The box model: **todo insert picture**
-# Three ways to do CSS:
+### Three ways to do CSS:
 inline: style tags work on **all** HTML elements<br />
 style element: in the head of the file <br />
 in a style sheet linked in the head: <link rel="stylesheet" href="styles.css"/> <br/>
