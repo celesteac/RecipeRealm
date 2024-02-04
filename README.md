@@ -33,10 +33,13 @@ I am going to use the required technologies in the following ways:
 - **React** - Application ported to use the React web framework.
 
 
-
-
-<!--
 ## HTML Deliverable
+- HTML Pages - there is a login page, a home page, and an add recipes page which connect to each other by links in the nav bar
+- DB/Login login input boxes
+- Links - there are links to each page and links that open new tabs to looks at recipes that have been added
+- A thematic food image is displayed on the login screen
+- Websocket - notifications pop up in real-time when users add recipes, and recipe view counts are tallied in real time
+<!--
 ## CSS Deliverable
 ## JavaScript Deliverable
 ## Service Deliverable
