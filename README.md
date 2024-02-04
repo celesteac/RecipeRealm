@@ -42,6 +42,7 @@ I am going to use the required technologies in the following ways:
 <!--
 ## CSS Deliverable
 - Images: Food background images on every page
+- Fonts 
 ## JavaScript Deliverable
 ## Service Deliverable
 ## DB/Login Deliverable
