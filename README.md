@@ -41,6 +41,7 @@ I am going to use the required technologies in the following ways:
 - **Websocket -** notifications pop up in real-time when users add recipes, and recipe view counts are tallied in real time
 <!--
 ## CSS Deliverable
+- Images: Food background images on every page
 ## JavaScript Deliverable
 ## Service Deliverable
 ## DB/Login Deliverable
