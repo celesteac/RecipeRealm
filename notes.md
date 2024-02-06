@@ -52,3 +52,10 @@ style element: in the head of the file <br />
 in a style sheet linked in the head: <link rel="stylesheet" href="styles.css"/> <br/>
 _important:_ more specific styling is always taken over inherited styling <br/>
 if specificity is equal, whichever is second takes precedence
+
+### ways to do reponsive design
+1. inside meta put name="viewport" property
+2. inside a css rule for an object put float: inline-end or float: right
+3. In a css display rule use block, inline, flex, or grid
+
+**CSS Grid** formats the element's children into a grid format and have them re-arrange
