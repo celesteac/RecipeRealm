@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang = "en" >
+<html lang="en">
 <head>
     <title>Recipe Realm</title>
 </head>
@@ -7,122 +7,30 @@
     <header>
         <h1>Recipe Realm</h1>
         <nav>
-            <li><a href="login.html">Login  </a></li>
-            <li><a href="index.html">Recipe Book</a></li>
+            <li><a href="index.html">Login  </a></li>
+            <li><a href="recipebook.html">Recipe Book</a></li>
             <li><a href="addrecipe.html">Add a Recipe</a></li>
         </nav>
         <hr />
     </header>
-    
+
     <main>
-    <section>
-        <h1>Recipe Book:</h1>
-
-        <ul class="recipe list">
-            <li class="group --breakfast">
-                <span>Breakfast</span>
-                <ul>
-                    <li class="item">
-                        <span class="recipe name">Potstickers</span> 
-                        <span class="recipe time">Time: 15 min</span> 
-                        <span class="views">views: 5</span> 
-                        <span class="added by">added by Lee</span>
-                    </li>
-                    <li class="item">
-                        <span class="recipe name">Potstickers</span> 
-                        <span class="recipe time">Time: 15 min</span> 
-                        <span class="views">views: 5</span> 
-                        <span class="added by">added by Lee</span>
-                    </li>
-                    <li class="item">
-                        <span class="recipe name">Potstickers</span> 
-                        <span class="recipe time">Time: 15 min</span> 
-                        <span class="views">views: 5</span> 
-                        <span class="added by">added by Lee</span>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="group --lunch">
-                <span>Lunch</span>
-                <ul>
-                    <li class="item">
-                        <span class="recipe name">Potstickers</span> 
-                        <span class="recipe time">Time: 15 min</span> 
-                        <span class="views">views: 5</span> 
-                        <span class="added by">added by Lee</span>
-                    </li>
-                    <li class="item">
-                        <span class="recipe name">Potstickers</span> 
-                        <span class="recipe time">Time: 15 min</span> 
-                        <span class="views">views: 5</span> 
-                        <span class="added by">added by Lee</span>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="group --dinner">
-                <span>Dinner</span>
-                <ul>
-                    <li class="item">
-                        <span class="recipe name">Potstickers</span> 
-                        <span class="recipe time">Time: 15 min</span> 
-                        <span class="views">views: 5</span> 
-                        <span class="added by">added by Lee</span>
-                    </li>
-                    <li class="item">
-                        <span class="recipe name">Potstickers</span> 
-                        <span class="recipe time">Time: 15 min</span> 
-                        <span class="views">views: 5</span> 
-                        <span class="added by">added by Lee</span>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="group --appetizers">
-                <span>Appetizers</span>
-            </li>
-
-            <li class="group --snacks">
-                <span>Snacks</span>
-            </li>
-
-            <li class="group --american">
-                <span>Central/South American</span>
-            </li>
-
-            <li class="group --asian">
-                <span>Asian</span>
-            </li>
-
-            <li class="group --european">
-                <span>European</span>
-            </li>
-
-            <li class="group --oceanic">
-                <span>Oceanic</span>
-            </li>
-
-            <li class="group --african">
-                <span>African</span>
-            </li>
-
-        </ul>
-    </section>
-
-    <section>
-        <h2>Notifications</h2>
-        <p>Lee added a recipe: Potstickers <span>30 min ago</span></p>
-        <p>Lee added a recipe: Potstickers <span>30 min ago</span></p>
-        <p>Lee added a recipe: Potstickers <span>30 min ago</span></p>
-    </section>
+        <h1>Welcome</h1>
+        <img alt="food" src="FoodPicture.jpg" width="300px" />
+        <p>Login or Signup</p>
+        <form method="get" action="recipebook.html"">
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Username" /> <br />
+            <label for="password">Password</label>
+            <input id="password" type="text" placeholder="Password" />
+            <button type="submit">Login</button>
+        </form>
     </main>
 
     <footer>
         <hr />
         <p>Celeste Chamberlin</p>
         <p><a href="https://github.com/celesteac/Startup">Github repository</a></p>
-
-    </footer>
+    </footer>    
 </body>
 </html>
