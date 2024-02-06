@@ -34,11 +34,12 @@ I am going to use the required technologies in the following ways:
 
 
 ## HTML Deliverable
-- **HTML Pages -** there are three pages: a login page, a home page, and an add recipes page which connect to each other by links in the nav bar
-- **DB/Login login -** input boxes and submit button for login. Recipe options are stored on and pulled from the database
+- **HTML Pages -** there are three pages: a login page, a home page, and an add recipes page which connect by links in the nav bar
+- **DB/Login -** input boxes and submit button for login. Recipe options are stored on and pulled from the database. A random food quote on the add a recipe page is retrieved from the database.
+- **Input** - on the add a recipe page user input is accepted using dropdown selection, number input, URL, and text, in order to build the recipe page
 - **Links -** there are links to each page and links that open new tabs to looks at recipes that have been added
 - **Image -** A thematic food image is displayed on the login screen
-- **Websocket -** notifications pop up in real-time when users add recipes, and recipe view counts are tallied in real time
+- **Websocket -** notifications pop up in real-time when users add recipes, and recipe view counts are tallied/updated in real-time
 <!--
 ## CSS Deliverable
 - Images: Food background images on every page
