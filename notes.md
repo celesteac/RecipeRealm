@@ -58,4 +58,5 @@ if specificity is equal, whichever is second takes precedence
 2. inside a css rule for an object put float: inline-end or float: right
 3. In a css display rule use block, inline, flex, or grid
 
-**CSS Grid** formats the element's children into a grid format and have them re-arrange
+**CSS Grid** formats the element's children into a grid format and have them re-arrange <br />
+**Debugging CSS** Use the chrome debugger to turn styles on elements on and off and understand, don't just change the actual code until it looks ok
