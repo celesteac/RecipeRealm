@@ -60,3 +60,8 @@ if specificity is equal, whichever is second takes precedence
 
 **CSS Grid** formats the element's children into a grid format and have them re-arrange <br />
 **Debugging CSS** Use the chrome debugger to turn styles on elements on and off and understand, don't just change the actual code until it looks ok
+
+## JavaScript Notes
+In JS functions can be passed like first order or primitive type (like an int) <br/>
+A JS object is like a map or dictionary (key value pairs) <br/>
+Arrays are 
