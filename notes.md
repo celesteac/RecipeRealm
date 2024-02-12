@@ -64,4 +64,16 @@ if specificity is equal, whichever is second takes precedence
 ## JavaScript Notes
 In JS functions can be passed like first order or primitive type (like an int) <br/>
 A JS object is like a map or dictionary (key value pairs) <br/>
-Arrays are 
+Arrays are not firt order object <br />
+Object equality is compared with memory addresses, not with actual content, so [1,2] != [1,2] <br/>
+"undefined" is a basic (primative?) type, used often for things that have been declared or defined but not given a value (like some functions) <br/>
+**const** is used to declare a variable that can't be changed, or more precisely what is pointing too. If it were an object, you could still modify the objcet
+### Anonymous Functions
+variable = function() { ... } <br/>
+a function with no name, kind of like a pointer to a function but actually a higher order function <br/>
+useful to pass the anonymous function as a variable to some other function <br/>
+the value of "variable" is the entire function definition <br/>
+### Arrow Functions
+A type of anonymous functions ...
+### Closures
+A functionthat uses its surrounding state when it was created and those are the parameters it works with 
