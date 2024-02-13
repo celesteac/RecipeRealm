@@ -4,25 +4,12 @@ body {
     min-width: 375px;
 }
 
-.navbar {
-    display: flex;
-    flex-direction: row;
-}
-
 header {
     flex: 0 80px;
 }
 
 main{
-    flex: 1 calc(100vh - 0px);
-}
-
-.bg-image{
-    background-image: url('FoodPicture.jpg');
-    background-size: cover;
-    background-position: center;
-    opacity: .5;
-    /* transform: scaleX(-1); */
+    flex: 1 calc(100vh - 120px);
 }
 
 footer {
@@ -35,4 +22,27 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2;
+    border-color: white;
+}
+
+.navbar-brand {
+    font-size: 200px;
+}
+
+.bg-image{
+    background-image: url('FoodPicture.jpg');
+    background-size: cover;
+    background-position: center;
+    /* opacity: .5; */
+    /* transform: scaleX(-1); */
+}
+
+.container {
+    max-width: 300px;
 }
