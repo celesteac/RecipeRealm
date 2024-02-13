@@ -14,14 +14,25 @@ header {
 }
 
 main{
-    flex: 1 calc(100vh - 110px);
+    flex: 1 calc(100vh - 0px);
+}
+
+.bg-image{
+    background-image: url('FoodPicture.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: .5;
+    /* transform: scaleX(-1); */
 }
 
 footer {
-    flex: 0 80px;
+    flex: 0 40px;
 
     display: flex;
-    flex-direction: columns;
     justify-content: center;
     align-items: center;
+}
+
+footer p {
+    margin: 0;
 }
