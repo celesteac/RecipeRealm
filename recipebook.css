@@ -29,8 +29,16 @@ footer p {
     margin: 0;
 }
 
-/* .bg-image{
+main section {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-image{
     background-image: url('FoodPicture.jpg');
     background-size: cover;
     background-position: center;
-} */
+}
