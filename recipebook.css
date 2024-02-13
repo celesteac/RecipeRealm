@@ -12,6 +12,7 @@ main{
     flex: 1 calc(100vh - 120px);
 
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -28,32 +29,8 @@ footer p {
     margin: 0;
 }
 
-.navbar {
-    display: flex;
-    flex-direction: row;
-    border-bottom: 2;
-    border-color: white;
-}
-
-.navbar-brand {
-    font-size: 200px;
-}
-
-.bg-image{
+/* .bg-image{
     background-image: url('FoodPicture.jpg');
     background-size: cover;
     background-position: center;
-    /* opacity: .5; */
-    /* transform: scaleX(-1); */
-}
-
-.card{
-    /* opacity: .5; */
-    max-width: 400px;
-    padding: 20px;
-}
-
-/* 
-.container {
-    max-width: 300px;
 } */
