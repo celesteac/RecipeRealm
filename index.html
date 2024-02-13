@@ -17,13 +17,13 @@
 </head>
 <body>
     <header >
-        <nav class="navbar bg-dark text-light">
+        <nav class="navbar navbar-expand-sm bg-info text-light">
         <h1>Recipe Realm</h1>
         <div class="container-fluid">
         <ul class="navbar-nav">
-            <li><a href="recipebook.html">Recipe Book</a></li>
-            <li><a href="addrecipe.html">Add a Recipe</a></li>
-            <li><a href="index.html">Sign Out</a></li>
+            <li class="nav-item"><a class="nav-link" href="recipebook.html">Recipe Book</a></li>
+            <li class="nav-item"><a class="nav-link" href="addrecipe.html">Add a Recipe</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html">Sign Out</a></li>
         </ul>
         </div>
         </nav>
@@ -33,7 +33,7 @@
         <h1>Welcome</h1>
         <img alt="food" src="FoodPicture.jpg" width="300px" />
         <p>Login or Signup</p>
-        <form method="get" action="recipebook.html"">
+        <form method="get" action="recipebook.html">
             <label for="name">Name</label>
             <input id="name" type="text" placeholder="Username" /> <br />
             <label for="password">Password</label>
@@ -42,10 +42,8 @@
         </form>
     </main>
 
-    <footer>
-        <hr />
-        <p>Celeste Chamberlin</p>
-        <p><a href="https://github.com/celesteac/Startup">Github repository</a></p>
+    <footer class="bg-info">
+        <p>Celeste Chamberlin <a href="https://github.com/celesteac/Startup">Github repository</a></p>
     </footer>    
 </body>
 </html>

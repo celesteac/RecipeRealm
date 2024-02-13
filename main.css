@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-width: 375px;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+}
+
+header {
+    flex: 0 80px;
+}
+
+main{
+    flex: 1 calc(100vh - 110px);
+}
+
+footer {
+    flex: 0 80px;
+
+    display: flex;
+    flex-direction: columns;
+    justify-content: center;
+    align-items: center;
+}
