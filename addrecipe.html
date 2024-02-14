@@ -5,7 +5,7 @@
     <!-- Tell browsers not to scale the viewport automatically -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recipe Realm</title>
-    <link rel="stylesheet" href="recipebook.css" />
+    <link rel="stylesheet" href="addrecipe.css" />
 
     <!-- Include bootstrap CSS framework -->
     <link
@@ -31,18 +31,20 @@
     </header>
     
     <main>
+    <div class="container col-sm-6 text-bg-light rounded px-5 py-4">
         <h1>Add a Recipe</h1>
-        <p>Add a recipe</p>
 
         <form method="get" action="index.html"">
             <label for="title">Title</label>
             <input id="title" type="text" placeholder="Recipe Title" /> <br />
             
             <label for="time">Time: </label>
-            <label for="time">Hours </label>
-            <input type="number" id="time" min="0" max="12" step="1" />
-            <label for="time">Minutes </label>
-            <input type="number" id="time" min="0" max="59" step="1" /> <br />
+            <div id="times" class="p-2">
+                <label for="time">Hours </label>
+                <input type="number" id="time" min="0" max="12" step="1" class="px-2"/>
+                <label for="time">Minutes </label>
+                <input type="number" id="time" min="0" max="59" step="1" /> <br />
+            </div>
 
             <label for="url">URL:</label>
             <input id="url" type="url" placeholder="URL to recipe" /> <br />
@@ -61,12 +63,13 @@
                 <option>African</option>
             </select> <br />
             
-            <button type="submit">Add Recipe</button>
+            <button type="submit" class="btn btn-sm btn-info mb-4">Add Recipe</button>
         </form>
+        <p class="mb-0">A random quote about food</p>
+    </div>
     </main>
 
     <footer class="bg-info">
-        <p>A random quote about food</p>
         <p>Celeste Chamberlin</p>
         <p><a href="https://github.com/celesteac/Startup">Github repository</a></p>
 
