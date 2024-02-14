@@ -21,59 +21,63 @@
         <nav class="navbar navbar-expand-sm text-bg-info border-bottom border-secondary border-5">
             <a style="font-size: 30px;" class="navbar-brand ms-4">Recipe Realm</a>
             <div class="container-fluid">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="index.html">Login</a></li>
-                <li class="nav-item"><a class="nav-link" href="recipebook.html">Recipe Book</a></li>
-                <li class="nav-item"><a class="nav-link  active" href="addrecipe.html">Add a Recipe</a></li>
-            </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="recipebook.html">Recipe Book</a></li>
+                    <li class="nav-item"><a class="nav-link  active" href="addrecipe.html">Add a Recipe</a></li>
+                </ul>
             </div>
         </nav>
     </header>
     
     <main>
-    <div class="container col-sm-6 text-bg-light rounded px-5 py-4">
-        <h1>Add a Recipe</h1>
+        <div class="container col-sm-5 text-bg-light rounded px-5 py-4 text-center">
+            <h1>Add a Recipe</h1>
 
-        <form method="get" action="index.html"">
-            <label for="title">Title</label>
-            <input id="title" type="text" placeholder="Recipe Title" /> <br />
+            <form  method="get" action="index.html">
+                <div>
+                    <label class="form-label" for="title">Title</label>
+                    <input class="form-control" id="title" type="text" placeholder="Recipe Title" /> <br />
+                </div>
+
+                <div class="">
+                    <h6>Time: </h6>
+                    <label class="form-label" for="time">Hours </label>
+                    <input class="form-control" type="number" id="time" min="0" max="12" step="1"/>
+                    <label class="form-label" for="time">Minutes </label>
+                    <input class="form-control" type="number" id="time" min="0" max="59" step="1" /> <br />
+                </div>
+                <div>
+                    <label class="form-label" for="url">URL:</label>
+                    <input class="form-control" id="url" type="url" placeholder="URL to recipe" /> <br />
+                </div>
+                <div>
+                    <label class="form-label" for="category">Category </label>
+                    <select class="form-control" id="category">
+                        <option>Breakfast</option>
+                        <option>Lunch</option>
+                        <option>Dinner</option>
+                        <option>Appetizers</option>
+                        <option>Snacks</option>
+                        <option>Central/South American</option>
+                        <option>Asian</option>
+                        <option>European</option>
+                        <option>Oceanic</option>
+                        <option>African</option>
+                    </select>
+                </div>
             
-            <label for="time">Time: </label>
-            <div id="times" class="p-2">
-                <label for="time">Hours </label>
-                <input type="number" id="time" min="0" max="12" step="1" class="px-2"/>
-                <label for="time">Minutes </label>
-                <input type="number" id="time" min="0" max="59" step="1" /> <br />
-            </div>
-
-            <label for="url">URL:</label>
-            <input id="url" type="url" placeholder="URL to recipe" /> <br />
-
-            <label for="category">Category </label>
-            <select id="category">
-                <option>Breakfast</option>
-                <option>Lunch</option>
-                <option>Dinner</option>
-                <option>Appetizers</option>
-                <option>Snacks</option>
-                <option>Central/South American</option>
-                <option>Asian</option>
-                <option>European</option>
-                <option>Oceanic</option>
-                <option>African</option>
-            </select> <br />
-            
-            <button type="submit" class="btn btn-sm btn-info mb-4">Add Recipe</button>
-        </form>
-        <p class="mb-0">A random quote about food</p>
-    </div>
+                <button type="submit" class="btn btn-sm btn-info mb-4">Add Recipe</button>
+            </form>
+            <p class="mb-0">A random quote about food</p>
+        </div>
     </main>
 
     <footer class="bg-info">
         <p>Celeste Chamberlin</p>
         <p><a href="https://github.com/celesteac/Startup">Github repository</a></p>
+    </footer>
 
-    </footer>    
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
