@@ -34,26 +34,32 @@
         <div class="container col-sm-5 text-bg-light rounded px-5 py-4 text-center">
             <h1>Add a Recipe</h1>
 
-            <form  method="get" action="index.html">
-                <div>
-                    <label class="form-label" for="title">Title</label>
+            <form  method="get" action="index.html" class="pt-3">
+                <div class="input-group pb-3">
+                    <span class="input-group-text">Title</span>
                     <input class="form-control" id="title" type="text" placeholder="Recipe Title" /> <br />
                 </div>
 
-                <div class="">
-                    <h6>Time: </h6>
-                    <label class="form-label" for="time">Hours </label>
-                    <input class="form-control" type="number" id="time" min="0" max="12" step="1"/>
-                    <label class="form-label" for="time">Minutes </label>
-                    <input class="form-control" type="number" id="time" min="0" max="59" step="1" /> <br />
+                <div class="row pb-3">
+                    <!-- <label class="form-label" for="time">Time </label> -->
+                    <div class="col input-group">
+                        <span class="input-group-text">hours</span>
+                        <input class="form-control" type="number" id="time" min="0" max="12" step="1"/>
+                    </div>
+                    <div class="col input-group">
+                        <span class="input-group-text">minutes</span>
+                        <input class="form-control" type="number" id="time" min="0" max="59" step="1" /> <br />
+                    </div>
                 </div>
-                <div>
-                    <label class="form-label" for="url">URL:</label>
+
+                <div class="input-group pb-3">
+                    <span class="input-group-text">url</span>
                     <input class="form-control" id="url" type="url" placeholder="URL to recipe" /> <br />
                 </div>
-                <div>
-                    <label class="form-label" for="category">Category </label>
-                    <select class="form-control" id="category">
+
+                <div class="input-group pb-3">
+                    <span class="input-group-text">Category</span>
+                    <select class="form-select" id="category">
                         <option>Breakfast</option>
                         <option>Lunch</option>
                         <option>Dinner</option>
@@ -69,7 +75,7 @@
             
                 <button type="submit" class="btn btn-sm btn-info mb-4">Add Recipe</button>
             </form>
-            <p class="mb-0">A random quote about food</p>
+            <p class="mb-0">A random, inspiring quote about food</p>
         </div>
     </main>
 
