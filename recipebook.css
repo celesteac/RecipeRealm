@@ -42,3 +42,12 @@ main section {
     background-size: cover;
     background-position: center;
 }
+
+#r-list{
+    max-height: 80vh;
+    overflow-y: scroll;
+}
+
+li {
+    padding-top: 20px;
+}
