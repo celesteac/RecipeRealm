@@ -53,21 +53,33 @@ in a style sheet linked in the head: <link rel="stylesheet" href="styles.css"/> 
 _important:_ more specific styling is always taken over inherited styling <br/>
 if specificity is equal, whichever is second takes precedence
 
-### ways to do reponsive design
+### Ways to do responsive design
 1. inside meta put name="viewport" property
-2. inside a css rule for an object put float: inline-end or float: right
-3. In a css display rule use block, inline, flex, or grid
+2. inside a CSS rule for an object put float: inline-end or float: right
+3. In a CSS display rule use block, inline, flex, or grid
 
-**CSS Grid** formats the element's children into a grid format and have them re-arrange <br />
-**Debugging CSS** Use the chrome debugger to turn styles on elements on and off and understand, don't just change the actual code until it looks ok
+**CSS Grid** formats the element's children into a grid format and has them re-arrange < br/>
+**Debugging CSS** Use the Chrome debugger to turn styles on elements on and off and understand, don't just change the actual code until it looks ok
 
 ## JavaScript Notes
+The primitive types are Null(a var w/out a value), Undefined(a var not defined), boolean, number, BigInt, String, Symbol(a unique value) <br/>
+The object types are Object(like dict) function(can be called), Date, Array, Map(different from Object?), JSON(uses objects for info exchange) <br/>
 In JS functions can be passed like first order or primitive type (like an int) <br/>
-A JS object is like a map or dictionary (key value pairs) <br/>
-Arrays are not firt order object <br />
+A JS object is like a map or dictionary (key-value pairs) <br/>
+Arrays are not first-order objects??? <br />
 Object equality is compared with memory addresses, not with actual content, so [1,2] != [1,2] <br/>
-"undefined" is a basic (primative?) type, used often for things that have been declared or defined but not given a value (like some functions) <br/>
-**const** is used to declare a variable that can't be changed, or more precisely what is pointing too. If it were an object, you could still modify the objcet
+"undefined" is a primitive type, used often for things that have been declared or defined but not given a value (like some functions) <br/>
+**const** is used to declare a variable that can't be changed, or more precisely what it is pointing to. If it were an object, you could still modify the object but not reassign the const variable <br/>
+Equality is generally defined with truthy and falsy, or converted to a boolean and then evaluated. So, to show whether two variable are actually the same, use the strict equality === and inequality !== operators <br/>
+ternary operator: a === 1 ? console.log(1) : console.log('not 1');
+### Loops
+**for** like c++ <br/>
+**for in** for (const name in obj) - for object property names
+when used on an array, prints indices, not values
+**for of** 
+**while**
+**do while**
+**switch**
 ### Anonymous Functions
 variable = function() { ... } <br/>
 a function with no name, kind of like a pointer to a function but actually a higher order function <br/>
