@@ -75,11 +75,12 @@ ternary operator: a === 1 ? console.log(1) : console.log('not 1');
 ### Loops
 **for** like c++ <br/>
 **for in** for (const name in obj) - for object property names
-when used on an array, prints indices, not values
-**for of** 
-**while**
-**do while**
-**switch**
+when used on an array, prints indices, not values <br/>
+**for of** for (const val of arr) - iterates over iterable's (map, array, set..) property values <br/>
+**while** normal <br/>
+**do while** do once then while <br/>
+**switch** exist <br/>
+**continue and break** can be put inside while loops 
 ### Anonymous Functions
 variable = function() { ... } <br/>
 a function with no name, kind of like a pointer to a function but actually a higher order function <br/>
