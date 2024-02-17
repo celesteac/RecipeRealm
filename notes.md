@@ -87,6 +87,33 @@ a function with no name, kind of like a pointer to a function but actually a hig
 useful to pass the anonymous function as a variable to some other function <br/>
 the value of "variable" is the entire function definition <br/>
 ### Arrow Functions
-A type of anonymous functions ...
-### Closures
-A functionthat uses its surrounding state when it was created and those are the parameters it works with 
+A type of anonymous functios. Useful for passing functions without defining them with a name. The => takes the place of "function" <br/>
+(a,b) => a-b <br/>
+a single expression does not need {} or "return" <br/>
+**closures** are arrow functons designed to remember the values of the parameters when they are were created instead of the current variables <br?
+ officially: A function that uses its surrounding state when it was created and those are the parameters it works with 
+ ### JSON
+ Uses Javascript Object Notation to transfer data. JSON.stringify(obj) converts to JSON and JSON.parse(josonobj) converts JSON to Javascript
+ ### Objects and Classes
+ Any function that returns an object can be called with the new operator and is like a mini clas <br/>
+ The entries, values, and keys functions return info about the object <br/>
+ Classes are very similar but have slightly different syntax <br/>
+ Classes can inherite from other classes using "extend"
+ ### Useful
+**RegEx** useful for finding text and replacing or matching it (among other things) <br/>
+**Rest and Spread** for using or catching several parameters without listing all of them <br/>
+**Exceptions** have try and catch like normal, but they also have a "finally" block that executes whether or not an exception was thrown <br/>
+### Destructuring
+const a = [1, 2, 4, 5]; <br/>
+// destructure the first two items from a, into the new variables b and c <br/>
+const [b, c] = a; //not creating an array, just desturcuting values out <br/>
+to implement with objects, use the names of the properties that you want, not just their positions <br/>
+const o = { a: 1, b: 'animals', c: ['fish', 'cats'] }; <br/>
+const { a, c } = o; <br/>
+console.log(a, c); <br/>
+// OUTPUT 1, ['fish', 'cats'] <br/>
+### This
+In the global scope, this refers to the globalThis, or the runtime environment (ex: the browser) <br/>
+Inside a function, this referes to the object that own the function (which could be globalThis) <br/>
+Inside an object this refers to the object <br/>
+A closure will keep track of the this variable that it originally referred to
