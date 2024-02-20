@@ -117,3 +117,12 @@ In the global scope, this refers to the globalThis, or the runtime environment (
 Inside a function, this referes to the object that own the function (which could be globalThis) <br/>
 Inside an object this refers to the object <br/>
 A closure will keep track of the this variable that it originally referred to
+### Promises
+The setTimeout function sets a timer which executes a function or specified piece of code once the timer expires <br/>
+setTimeout(code, time, properties...) <br/>
+Promises are an object running in the webpage API (a seperate stack for execution) with a function and a state <br/>
+Possible states: pending, fulfilled, rejected <br/>
+The promise takes a function as a parameter, which function takes two function parameters: reject and resolve (which are always the same) <br/>
+The promise also has methods *then, catch, and finally*, which run if the promise is resolved, rejected, or regardless of the outcome, respectively
+### Async, Await 
+Markng a function as async means that it will return a promise
