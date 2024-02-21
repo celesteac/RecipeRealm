@@ -125,4 +125,7 @@ Possible states: pending, fulfilled, rejected <br/>
 The promise takes a function as a parameter, which function takes two function parameters: reject and resolve (which are always the same) <br/>
 The promise also has methods *then, catch, and finally*, which run if the promise is resolved, rejected, or regardless of the outcome, respectively
 ### Async, Await 
-Markng a function as async means that it will return a promise
+Marking a function as async means that it will return a promise </br>
+Calling an async function will return a promise, immediately in its resolved state </br>
+Calling a function that returns a Promise with return the promise in its pending state until is resolved, then will return the promise in its resolved state </br>
+Calling an async function with await will wait until the Promise is resolved, then return the return value of the Promise (not the Promise itself) </br>
