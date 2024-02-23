@@ -13,8 +13,11 @@ Use the command  ```ssh -i [key pair file] ubuntu@[ip address]``` <br />
 Once in, use ```ls -l``` to see the files <br />
 <br />
 In order to create new domain names go to the Route 5 service and create new records <br />
-*.yourwebsite.domainname will reroute anything (rand.happyrecipes.click)
-
+*.yourwebsite.domainname will reroute anything (rand.happyrecipes.click) <br/>
+"cname" dns type will map one dns class to a different one...? <br/>
+"a" dns type is just and address <br/>
+top level domain vs sub domain vs root domain <be/>
+byu vs cs.260.byu.edu vs byu.edu
 ## HTTP/HTTPS
 With Http, any message sent on the network is readable by everybody
 
@@ -33,6 +36,13 @@ Caddy does 3 important things
 1. web certificates
 2. serves up static HTML files
 3. gateway for subdomain requests
+
+## Console Notes
+sudo is to use as a super user <br/>
+ls is list <br/>
+la is long (all the details) <br/>
+chmod ... <br/>
++x executable file <br/>
 
 ## Shell Script Notes
 Write a shell script file.sh that can be run with specified commands from the command line. Very useful.
@@ -90,10 +100,15 @@ the value of "variable" is the entire function definition <br/>
 A type of anonymous functios. Useful for passing functions without defining them with a name. The => takes the place of "function" <br/>
 (a,b) => a-b <br/>
 a single expression does not need {} or "return" <br/>
+parentheses are not necessary if everything is on the same line and there is no return statement <br/>
 **closures** are arrow functons designed to remember the values of the parameters when they are were created instead of the current variables <br?
- officially: A function that uses its surrounding state when it was created and those are the parameters it works with 
+ officially: A function that uses its surrounding state when it was created and those are the parameters it works with  <br/>
+ 
  ### JSON
- Uses Javascript Object Notation to transfer data. JSON.stringify(obj) converts to JSON and JSON.parse(josonobj) converts JSON to Javascript
+ Uses Javascript Object Notation to transfer data. JSON.stringify(obj) converts to JSON and JSON.parse(josonobj) converts JSON to Javascript <br/>
+ format: {"key":val} <br/>
+ (cannot have a val of undefined) <br/>
+ JSON objects always have strings for keys, JS objects always have symbols for keys (not strings) 
  ### Objects and Classes
  Any function that returns an object can be called with the new operator and is like a mini clas <br/>
  The entries, values, and keys functions return info about the object <br/>
@@ -101,6 +116,7 @@ a single expression does not need {} or "return" <br/>
  Classes can inherite from other classes using "extend"
  ### Useful
 **RegEx** useful for finding text and replacing or matching it (among other things) <br/>
+/regex/i <br/>
 **Rest and Spread** for using or catching several parameters without listing all of them <br/>
 **Exceptions** have try and catch like normal, but they also have a "finally" block that executes whether or not an exception was thrown <br/>
 ### Destructuring
