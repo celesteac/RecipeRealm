@@ -40,8 +40,8 @@ Caddy does 3 important things
 ## Console Notes
 sudo is to use as a super user <br/>
 ls is list <br/>
-la is long (all the details) <br/>
-chmod ... <br/>
+-la is long (all the details) <br/>
+chmod modifies the permissions on the file <br/>
 +x executable file <br/>
 
 ## Shell Script Notes
@@ -70,6 +70,15 @@ if specificity is equal, whichever is second takes precedence
 
 **CSS Grid** formats the element's children into a grid format and has them re-arrange < br/>
 **Debugging CSS** Use the Chrome debugger to turn styles on elements on and off and understand, don't just change the actual code until it looks ok
+
+### fonts
+This way or use @font-face
+```
+@import url('https://fonts.googleapis.com/css2?family=Rubik Microbe&display=swap');
+p {
+  font-family: 'Rubik Microbe';
+}
+```
 
 ## JavaScript Notes
 The primitive types are Null(a var w/out a value), Undefined(a var not defined), boolean, number, BigInt, String, Symbol(a unique value) <br/>
@@ -145,3 +154,4 @@ Marking a function as async means that it will return a promise </br>
 Calling an async function will return a promise, immediately in its resolved state </br>
 Calling a function that returns a Promise with return the promise in its pending state until is resolved, then will return the promise in its resolved state </br>
 Calling an async function with await will wait until the Promise is resolved, then return the return value of the Promise (not the Promise itself) </br>
+Using await to call an async function will cause that thread to hold until the promise in the async function resolves <br/>
