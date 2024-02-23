@@ -14,6 +14,8 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+
+    <script src="recipebook.js" defer></script>
 </head>
 <body class="bg-image">
 
@@ -37,8 +39,8 @@
                 <h2>Recipe Book</h2>
 
                 <!-- Breakfast Section Start -->
-                <div id="group" class="col-sm-12">
-                    <div class="card mt-3" id="category">
+                <div id="group" class="col-sm-12 ">
+                    <div class="card mt-3 text-bg-secondary" id="category">
                         <div class="card-body">
                             <h3 class="card-title text-center m-0">Breakfast</h3>
                         </div>
@@ -80,7 +82,7 @@
 
                 <!-- Lunch Section Start -->
                 <div id="group" class="col-sm-12">
-                    <div class="card  mt-3" id="category">
+                    <div class="card  mt-3 text-bg-secondary" id="category">
                         <div class="card-body">
                             <h3 class="card-title text-center m-0">Lunch</h3>
                         </div>
@@ -122,7 +124,7 @@
 
                 <!-- Dinner Section Start -->
                 <div id="group" class="col-sm-12">
-                    <div class="card  mt-3" id="category">
+                    <div class="card  mt-3  text-bg-secondary" id="category">
                         <div class="card-body">
                             <h3 class="card-title text-center m-0">Dinner</h3>
                         </div>
@@ -142,7 +144,7 @@
 
                 <!-- Appetizers Section Start -->
                 <div id="group" class="col-sm-12">
-                    <div class="card  mt-3" id="category">
+                    <div class="card  mt-3 text-bg-secondary" id="category">
                         <div class="card-body">
                             <h3 class="card-title text-center m-0">Appetizers</h3>
                         </div>
@@ -162,7 +164,7 @@
 
                 <!-- Desserts Section Start -->
                 <div id="group" class="col-sm-12">
-                    <div class="card  mt-3" id="category">
+                    <div class="card  mt-3 text-bg-secondary" id="category">
                         <div class="card-body">
                             <h3 class="card-title text-center m-0">Desserts</h3>
                         </div>
@@ -180,18 +182,139 @@
                     </div> 
                 </div>
 
-                <!-- Add
-                American, Asian, european, oceanic, african, snacks -->
+                <!-- Snacks Section Start -->
+                <div id="group" class="col-sm-12">
+                    <div class="card  mt-3 text-bg-secondary" id="category">
+                        <div class="card-body">
+                            <h3 class="card-title text-center m-0">Snacks</h3>
+                        </div>
+                    </div>
+                    <div class="card mt-2" id="item">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h3 class="card-title">Potstickers</h3>
+                            <p class="card-text">Delicious pan-fried dumplings filled with savory goodness.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>Prep Time: 30 mins</span>
+                                <span>100 Views Look here</span>
+                                <span>By: John Doe</span>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+
+
+                <!-- American Section Start -->
+                <div id="group" class="col-sm-12">
+                    <div class="card  mt-3 text-bg-secondary" id="category">
+                        <div class="card-body">
+                            <h3 class="card-title text-center m-0">Latin American</h3>
+                        </div>
+                    </div>
+                    <div class="card mt-2" id="item">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h3 class="card-title">Potstickers</h3>
+                            <p class="card-text">Delicious pan-fried dumplings filled with savory goodness.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>Prep Time: 30 mins</span>
+                                <span>100 Views Look here</span>
+                                <span>By: John Doe</span>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+
+                <!-- Asian Section Start -->
+                <div id="group" class="col-sm-12">
+                    <div class="card  mt-3 text-bg-secondary" id="category">
+                        <div class="card-body">
+                            <h3 class="card-title text-center m-0">Asian</h3>
+                        </div>
+                    </div>
+                    <div class="card mt-2" id="item">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h3 class="card-title">Potstickers</h3>
+                            <p class="card-text">Delicious pan-fried dumplings filled with savory goodness.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>Prep Time: 30 mins</span>
+                                <span>100 Views Look here</span>
+                                <span>By: John Doe</span>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+
+                <!-- European Section Start -->
+                <div id="group" class="col-sm-12">
+                    <div class="card  mt-3 text-bg-secondary" id="category">
+                        <div class="card-body">
+                            <h3 class="card-title text-center m-0">European</h3>
+                        </div>
+                    </div>
+                    <div class="card mt-2" id="item">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h3 class="card-title">Potstickers</h3>
+                            <p class="card-text">Delicious pan-fried dumplings filled with savory goodness.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>Prep Time: 30 mins</span>
+                                <span>100 Views Look here</span>
+                                <span>By: John Doe</span>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+
+                <!-- Oceanic Section Start -->
+                <div id="group" class="col-sm-12">
+                    <div class="card  mt-3 text-bg-secondary" id="category">
+                        <div class="card-body">
+                            <h3 class="card-title text-center m-0">Oceanic</h3>
+                        </div>
+                    </div>
+                    <div class="card mt-2" id="item">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h3 class="card-title">Potstickers</h3>
+                            <p class="card-text">Delicious pan-fried dumplings filled with savory goodness.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>Prep Time: 30 mins</span>
+                                <span>100 Views Look here</span>
+                                <span>By: John Doe</span>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+
+                <!-- African Section Start -->
+                <div id="group" class="col-sm-12">
+                    <div class="card  mt-3 text-bg-secondary" id="category">
+                        <div class="card-body">
+                            <h3 class="card-title text-center m-0">African</h3>
+                        </div>
+                    </div>
+                    <div class="card mt-2" id="item">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h3 class="card-title">Potstickers</h3>
+                            <p class="card-text">Delicious pan-fried dumplings filled with savory goodness.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>Prep Time: 30 mins</span>
+                                <span>100 Views Look here</span>
+                                <span>By: John Doe</span>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
 
         </div>
     </section>
 
-    <section class="col-sm-3" id="notification-sec">
-        <div class="col-sm-10 text-bg-secondary p-5 py-4 rounded">
-            <h2>Notifications</h2>
-            <p>Lee added a recipe: Potstickers <span>30 min ago</span></p>
-            <p>Lee added a recipe: Potstickers <span>30 min ago</span></p>
-            <p>Lee added a recipe: Potstickers <span>30 min ago</span></p>
+    <section class="col-sm-3 py-5" >
+        <div class="container col-sm-10 text-bg-secondary p-5 rounded" id="notifications">
+            <h2 class="pb-2">Notifications</h2>
+            <div class="alert alert-light" role="alert">
+                <strong>Lee</strong> added a recipe: <strong>Potstickers</strong> 30 min ago
+            </div>
+            <div class="alert alert-light" role="alert">
+                <strong>Lee</strong> added a recipe: <strong>Potstickers</strong> 30 min ago
+            </div>
         </div>
     </section>
     
