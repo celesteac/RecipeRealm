@@ -9,8 +9,11 @@ function newNotification(user="John", recipe="Yummy Recipe", time="15 min"){
 }
 
 setInterval(()=>{
-    const newNot = newNotification("Anya","Sourdough","1 hour");
+    const newNot = newNotification("Sabrina","Sourdough","1 hour");
 
     const notificationsContainer = document.getElementById('notifications-list');
     notificationsContainer.innerHTML = newNot.innerHTML + notificationsContainer.innerHTML;
 },3000);
+
+let r = JSON.parse(localStorage.getItem('recipe'));
+console.log(r)

@@ -14,6 +14,7 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+    <script src="addrecipe.js"></script>
 </head>
 <body class="bg-image">
 
@@ -34,7 +35,7 @@
         <div class="container col-sm-5 text-bg-light rounded px-5 py-4 text-center">
             <h1>Add a Recipe</h1>
 
-            <form  method="get" action="index.html" class="pt-3">
+            <form class="pt-3">
                 <div class="input-group pb-3">
                     <span class="input-group-text">Title</span>
                     <input class="form-control" id="title" type="text" placeholder="Recipe Title" /> <br />
@@ -44,11 +45,11 @@
                     <!-- <label class="form-label" for="time">Time </label> -->
                     <div class="col input-group">
                         <span class="input-group-text">hours</span>
-                        <input class="form-control" type="number" id="time" min="0" max="12" step="1"/>
+                        <input class="form-control" type="number" id="time-hours" min="0" max="12" step="1"/>
                     </div>
                     <div class="col input-group">
                         <span class="input-group-text">minutes</span>
-                        <input class="form-control" type="number" id="time" min="0" max="59" step="1" /> <br />
+                        <input class="form-control" type="number" id="time-min" min="0" max="59" step="1" /> <br />
                     </div>
                 </div>
 
@@ -65,7 +66,7 @@
                         <option>Dinner</option>
                         <option>Appetizers</option>
                         <option>Snacks</option>
-                        <option>Central/South American</option>
+                        <option>Latin American</option>
                         <option>Asian</option>
                         <option>European</option>
                         <option>Oceanic</option>
@@ -73,7 +74,7 @@
                     </select>
                 </div>
             
-                <button type="submit" class="btn btn-sm btn-info mb-4">Add Recipe</button>
+                <button class="btn btn-sm btn-info mb-4" onclick="addRecipe()">Add Recipe</button>
             </form>
             <p class="mb-0">A random, inspiring quote about food from a 3rd party service call</p>
         </div>
