@@ -8,10 +8,21 @@ function addRecipe(){
                         hours:hoursEl.value,
                         minutes:minEl.value,
                         url:urlEl.value,
-                        categoryEl:categoryEl.value,
+                        category:categoryEl.value,
                         user:localStorage.getItem('user'),
                     }; 
-    localStorage.setItem('recipe', JSON.stringify(newRecipe));
-    console.log(newRecipe);
+    
+
+    let recipes = [];
+    const recipesJSON = localStorage.getItem('recipes');
+    if(recipesJSON){
+        recipes = JSON.parse(recipesJSON);
+    }
+    recipes.push(newRecipe);
+
+
+    localStorage.setItem('recipes', JSON.stringify(recipes));
+    console.log("recipes: " + recipes);
+    console.log("new recipe: " + newRecipe);
     console.log("again");
 }
