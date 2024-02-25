@@ -40,10 +40,17 @@ I am going to use the required technologies in the following ways:
 - **Links -** there are links to each page and links that open new tabs to looks at recipes that have been added
 - **Image -** A thematic food image is displayed on the login screen
 - **Websocket -** notifications pop up in real-time when users add recipes, and recipe view counts are tallied/updated in real-time
+
+## CSS Deliverable 
+- **Prerequisite:** A link to my GitHub startup repository in the footer of every page
+- **Header, footer, and main content body.** Used flex to layout sections.
+- **Navigation elements** in the navbar at the top. The current page displays as an active link.
+- unfinished: **Responsive** to window resizing.
+- **Application elements.** Buttons, forms, containers, and cards are done using bootstrap. Spacing is aesthetically pleasing
+- unfinished: **Application text** content is consistent, using the default bootstrap font
+- **Application images.** The background of every page has an image overlayed
+- **3rd party service call placeholder** at the bottom of the form on the "add a recipe" page
 <!--
-## CSS Deliverable
-- Images: Food background images on every page
-- Fonts 
 ## JavaScript Deliverable
 ## Service Deliverable
 ## DB/Login Deliverable
