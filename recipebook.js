@@ -20,8 +20,8 @@ function newRecipeEl(recipe){
 function emptyRecipeEl(){
     const r = document.createElement('div');
     r.innerHTML = ` <div class="card mt-2" id="item">
-                        <div class="card-body d-flex flex-column justify-content-center">
-                            <p class="card-text">no recipes yet</p>
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <p class="card-text">No recipes here yet!</p>
                         </div>
                     </div>`;
     return r;
@@ -57,8 +57,7 @@ function loadRecipes(){
         }
     } 
     
-    for(cat of categories){
-        console.log(cat + ": " + document.getElementById(cat).childElementCount);
+    for(const cat of categories){
         const catEl = document.getElementById(cat);
         if (catEl.childElementCount < 2){
             catEl.appendChild(emptyRecipeEl());
