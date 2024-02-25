@@ -17,7 +17,7 @@ function newRecipeEl(recipe){
     return r;
 }
 
-function emptyRecipe(){
+function emptyRecipeEl(){
     const r = document.createElement('div');
     r.innerHTML = ` <div class="card mt-2" id="item">
                         <div class="card-body d-flex flex-column justify-content-center">
@@ -34,7 +34,7 @@ function loadRecipes(){
                        "Desserts",
                        "Snacks",
                        "Appetizers",
-                       "Latin American",
+                       "Latin",
                        "Asian",
                        "European",
                        "African",
@@ -58,7 +58,11 @@ function loadRecipes(){
     } 
     
     for(cat of categories){
-        
+        console.log(cat + ": " + document.getElementById(cat).childElementCount);
+        const catEl = document.getElementById(cat);
+        if (catEl.childElementCount < 2){
+            catEl.appendChild(emptyRecipeEl());
+        }
     }
     
 }
