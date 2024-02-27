@@ -31,3 +31,7 @@ function addRecipe(){
     console.log("new recipe: " + newRecipe);
     console.log("again");
 }
+
+function backToCookbook(){
+    window.location.href = "recipebook.html";
+}

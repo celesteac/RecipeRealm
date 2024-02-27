@@ -5,7 +5,8 @@ function newRecipeEl(recipe){
     const r = document.createElement('div');
     r.innerHTML = ` <div class="card mt-2" id="item">
                         <div class="card-body d-flex flex-column justify-content-center">
-                            <h3 class="card-title"><a href=${recipe.url} target="_blank">${recipe.title}</a></h3>
+                            <h3 class="card-title"><a href=${recipe.url} target="_blank" class="link-dark">
+                            ${recipe.title}</a></h3>
                             <p class="card-text">${recipe.description}</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span>Prep Time: ${recipe.hours} hours ${recipe.minutes} min</span>
