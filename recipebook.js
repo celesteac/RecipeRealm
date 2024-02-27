@@ -6,7 +6,7 @@ function newRecipeEl(recipe){
     r.innerHTML = ` <div class="card mt-2" id="item">
                         <div class="card-body d-flex flex-column justify-content-center">
                             <h3 class="card-title">${recipe.title}</h3>
-                            <p class="card-text"></p>
+                            <p class="card-text">${recipe.description}</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span>Prep Time: ${recipe.hours} hours ${recipe.minutes} min</span>
                                 <span>100 Views</span>

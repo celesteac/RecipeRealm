@@ -2,16 +2,21 @@ function addRecipe(){
     const titleEl = document.getElementById('title');
     const hoursEl = document.getElementById('time-hours');
     const minEl = document.getElementById('time-min');
+    const descriptEl = document.getElementById('description');
     const urlEl = document.getElementById('url');
     const categoryEl = document.getElementById('category');
     const newRecipe = { title:titleEl.value,
                         hours:hoursEl.value,
                         minutes:minEl.value,
+                        description:descriptEl.value,
                         url:urlEl.value,
                         category:categoryEl.value,
                         user:localStorage.getItem('user'),
                     }; 
     
+    if(newRecipe.description === undefined){
+        newRecipe.description = "";
+    }
 
     let recipes = [];
     const recipesJSON = localStorage.getItem('recipes');
