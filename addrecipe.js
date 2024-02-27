@@ -30,6 +30,12 @@ function addRecipe(){
     console.log("recipes: " + recipes);
     console.log("new recipe: " + newRecipe);
     console.log("again");
+
+    resetForm();
+}
+
+function resetForm() {
+    document.getElementById("recipeForm").reset();
 }
 
 function backToCookbook(){
