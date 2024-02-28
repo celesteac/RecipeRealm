@@ -59,3 +59,7 @@ main > section {
     flex-direction: column;
     align-items: center;
 }
+
+#r-list::-webkit-scrollbar, #notifications::-webkit-scrollbar {
+    display: none;
+}
