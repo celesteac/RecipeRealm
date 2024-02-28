@@ -155,3 +155,23 @@ Calling an async function will return a promise, immediately in its resolved sta
 Calling a function that returns a Promise with return the promise in its pending state until is resolved, then will return the promise in its resolved state </br>
 Calling an async function with await will wait until the Promise is resolved, then return the return value of the Promise (not the Promise itself) </br>
 Using await to call an async function will cause that thread to hold until the promise in the async function resolves <br/>
+
+## The internet
+### DNS
+When you buy your domain name you also have to buy the IP address <br/>
+when someone navigates to your domain name, first it goes through the DNS which is a service to link domain names to IP addresses
+### internet layers
+link - physical connections <br/>
+internet - IP - chucks up data and establishes connections to send the data across <br/>
+Transport - TCP/UDP - TCP makes sure everything comes through in order (more expensive) - UDP doesn't check everything (run faster) <br/>
+Application - provides functionality like web browsing
+### web server
+the server is the hardware computer <br/>
+Most applications referece other servers (or services) <br/>
+the service redirects calls through port 443 to other parts of the application <br/>
+Caddy is the service that will group all of the services (gateway, hosting)
+
+
+
+
+
