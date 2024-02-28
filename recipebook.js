@@ -75,10 +75,11 @@ loadRecipes();
 /////////////    NOTIFICATIONS PANEL     ///////////////
 function newNotification(user="John", recipe="Yummy Recipe", time="15 min"){
     newN = document.createElement("div");
-    newN.innerHTML = `<div class="alert alert-light" role="alert">
+    newN.innerHTML = `<div class="alert alert-light alert-dismissible fade show" role="alert">
                         <strong>${user}</strong> added a recipe: <strong>${recipe}</strong> 
                         ${time} ago
-                      </div>`;
+                        <button type="button" class="btn-close btn-sm" data-bs-dismiss="alert" aria-label="Close"></button>
+                     </div>`;
     return newN;
 
 }
@@ -89,3 +90,12 @@ setInterval(()=>{
     const notificationsContainer = document.getElementById('notifications-list');
     notificationsContainer.innerHTML = newNot.innerHTML + notificationsContainer.innerHTML;
 },3000);
+
+function addNot(){
+    const newNot = newNotification("Sabrina","Sourdough","1 hour");
+
+    const notificationsContainer = document.getElementById('notifications-list');
+    notificationsContainer.innerHTML = newNot.innerHTML + notificationsContainer.innerHTML;
+}
+
+// addNot();
