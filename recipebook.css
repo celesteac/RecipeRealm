@@ -59,7 +59,3 @@ main > section {
     flex-direction: column;
     align-items: center;
 }
-
-li {
-    padding-top: 20px;
-}
