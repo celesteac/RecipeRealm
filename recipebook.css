@@ -60,6 +60,6 @@ main > section {
     align-items: center;
 }
 
-#r-list::-webkit-scrollbar, #notifications::-webkit-scrollbar {
+#notifications::-webkit-scrollbar {
     display: none;
 }
