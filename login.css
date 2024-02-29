@@ -28,7 +28,7 @@ footer p {
     margin: 0;
 }
 
-.bg-image{
+body {
     background-image: url('FoodPicture.jpg');
     background-size: cover;
     background-position: center;

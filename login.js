@@ -4,4 +4,3 @@ function login(){
     localStorage.setItem("user",nameEl.value);
     localStorage.setItem("password",passEl.value);
 }
-
