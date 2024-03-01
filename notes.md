@@ -171,7 +171,11 @@ Most applications referece other servers (or services) <br/>
 the service redirects calls through port 443 to other parts of the application <br/>
 Caddy is the service that will group all of the services (gateway, hosting)
 
+## Node.js
 
-
-
+Uses the V8 JS interpreter that chrome open-sourced and runs their browser and wrapped it in the console <br/>
+comes with npm, uses nvm (installed spereately) <br/>
+Allows the back-end of the stack to run JS, so now the whole stack runs in one language <br/>
+use npm init -y to turn your project into and npm project. <br/>
+It will automatically create a .json file <br/>
 
