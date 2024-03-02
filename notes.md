@@ -178,4 +178,9 @@ comes with npm, uses nvm (installed spereately) <br/>
 Allows the back-end of the stack to run JS, so now the whole stack runs in one language <br/>
 use npm init -y to turn your project into and npm project. <br/>
 It will automatically create a .json file <br/>
+<br/>
+Using npm install on a specific package will create two new files: <br/>
+*node_modules* which includes all of the source code that the package you install depends on (can be a lot, sdaly) <br/>
+*package-lock.json* which manages the versions of things... <br/>
+<br/>
 
