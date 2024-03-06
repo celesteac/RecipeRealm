@@ -50,8 +50,14 @@ I am going to use the required technologies in the following ways:
 - unfinished: **Application text** content is consistent, using the default bootstrap font
 - **Application images.** The background of every page has an image overlayed
 - **3rd party service call placeholder** at the bottom of the form on the "add a recipe" page
-<!--
+ 
 ## JavaScript Deliverable
+For this deliverable I implemented JavaScript so that the application works for a single user. I also added placeholders for future technology.
+- **Login** - when you enter your username and password then hit login, your information is saved in local storage and the page navigates to the Recipe Book
+- **Database** - when recipe information is entered on the "add a recipe" page, and the "add recipe" button is clicked, the information is displayed on local storage and used to display the recipe on the "recipe book" page
+- **Websocket** - on the recipe book page there is a notifications panel which has a placeholder time interval function to simulate notifications from websocket about recipes being added by other users.
+- **Service** - on the "add a recipe" page there is a placeholder for a random quote from a 3rd party servce call. 
+<!--
 ## Service Deliverable
 ## DB/Login Deliverable
 ## WebSocket Deliverable

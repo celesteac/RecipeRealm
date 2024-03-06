@@ -156,7 +156,7 @@ Calling a function that returns a Promise with return the promise in its pending
 Calling an async function with await will wait until the Promise is resolved, then return the return value of the Promise (not the Promise itself) </br>
 Using await to call an async function will cause that thread to hold until the promise in the async function resolves <br/>
 
-## The internet
+## Web services
 ### DNS
 When you buy your domain name you also have to buy the IP address <br/>
 when someone navigates to your domain name, first it goes through the DNS which is a service to link domain names to IP addresses
@@ -171,7 +171,52 @@ Most applications referece other servers (or services) <br/>
 the service redirects calls through port 443 to other parts of the application <br/>
 Caddy is the service that will group all of the services (gateway, hosting)
 
+## Fetch
+Returns a promise <br/>
+makes HTTP requests <br/>
+an example:
+```
+fetch('https://api.quotable.io/random')
+  .then((response) => response.json())
+  .then((jsonResponse) => {
+    console.log(jsonResponse);
+  });
+```
 
+### Node.js
 
+Uses the V8 JS interpreter that chrome open-sourced and runs their browser and wrapped it in the console <br/>
+comes with npm, uses nvm (installed spereately) <br/>
+Allows the back-end of the stack to run JS, so now the whole stack runs in one language <br/>
+use npm init -y to turn your project into and npm project. <br/>
+It will automatically create a .json file <br/>
+<br/>
+Using npm install on a specific package will create two new files: <br/>
+*node_modules* which includes all of the source code that the package you install depends on (can be a lot, sdaly) <br/>
+*package-lock.json* which manages the versions of things... <br/>
+<br/>
 
+### Express
+express -	constructor and default middleware <br/>
+app	-	express application <br/>
+req	-	request object from the client (HTTP headers)
+res	-		response object from the application (body)    <br/>
+router	-	adding child routing<br/>
+<br/>
+Example
+```
+const express = require('express');
+const app = express();
 
+app.get('*', (req, res) => {
+  res.send('<h1>Hello Express!</h1>');
+});
+
+app.listen(3000);
+```
+
+### Middleware
+Each express app.function() is a piece of middleware for handling different HTTP requests <br/>
+next() will call the next valid funciton in the express code <br/>
+Eventually there must be a response in the next change <br/>
+oRdEr MaTtErS <br/>
