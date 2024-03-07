@@ -68,7 +68,35 @@ function loadRecipes(){
 }
 
 
+function randomRecipe(){
+    const randRecipe = { title:"Random Recipe",
+        hours:"1",
+        minutes:"0",
+        description:"A fun recipe!",
+        url:"https://byu.edu",
+        category:"Random",
+        user:"Random",
+    }; 
+
+    const recipeEl = newRecipeEl(randRecipe);
+    const group = document.getElementById(randRecipe.category);
+    group.appendChild(recipeEl);
+
+}
+
+randomRecipe();
+
+
 loadRecipes();
+
+
+
+
+
+
+
+
+
 
 
 
