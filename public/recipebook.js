@@ -28,6 +28,18 @@ function emptyRecipeEl(){
     return r;
 }
 
+function randRecipeEl(recipe){
+    const r = document.createElement('div');
+    r.innerHTML = ` <div class="card mt-2" id="item">
+                        <div class="card-body d-flex flex-row justify-content-between align-items-center">
+                            <h3 class="card-title"><a href=${recipe.url} target="_blank" class="link-dark">
+                            ${recipe.title}</a></h3>
+                            <p class="card-text">${recipe.description}</p>
+                        </div>
+                    </div>`;
+    return r;
+}
+
 function loadRecipes(){
     let categories = ["Breakfast",
                        "Lunch",
@@ -68,24 +80,25 @@ function loadRecipes(){
 }
 
 
+
+
+
 function randomRecipe(){
+
+    
     const randRecipe = { title:"Random Recipe",
-        hours:"1",
-        minutes:"0",
         description:"A fun recipe!",
         url:"https://byu.edu",
         category:"Random",
-        user:"Random",
     }; 
 
-    const recipeEl = newRecipeEl(randRecipe);
+    const recipeEl = randRecipeEl(randRecipe);
     const group = document.getElementById(randRecipe.category);
     group.appendChild(recipeEl);
 
 }
 
 randomRecipe();
-
 
 loadRecipes();
 
