@@ -220,3 +220,9 @@ Each express app.function() is a piece of middleware for handling different HTTP
 next() will call the next valid funciton in the express code <br/>
 Eventually there must be a response in the next change <br/>
 oRdEr MaTtErS <br/>
+
+### Endpoint design
+Gramatical - Noun/resouce based <br/>
+Readable - human-understandable <br/>
+Simple - Single responsibility principle <br/>
+Documented - open API <br/>
