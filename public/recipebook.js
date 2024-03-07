@@ -31,7 +31,7 @@ function emptyRecipeEl(){
 function randRecipeEl(recipe){
     const r = document.createElement('div');
     r.innerHTML = ` <div class="card mt-2" id="item">
-                        <div class="card-body d-flex flex-row justify-content-between align-items-center">
+                        <div class="card-body d-flex flex-row justify-content-around align-items-center">
                             <h3 class="card-title"><a href=${recipe.url} target="_blank" class="link-dark">
                             ${recipe.title}</a></h3>
                             <p class="card-text">${recipe.description}</p>
@@ -80,21 +80,28 @@ function loadRecipes(){
 }
 
 
-
-
-
 function randomRecipe(){
 
-    
-    const randRecipe = { title:"Random Recipe",
-        description:"A fun recipe!",
-        url:"https://byu.edu",
-        category:"Random",
-    }; 
+    fetch('https://www.themealdb.com/api/json/v1/1/random.php')
+    .then((response) => response.json())
+    .then((data) => {
 
-    const recipeEl = randRecipeEl(randRecipe);
-    const group = document.getElementById(randRecipe.category);
-    group.appendChild(recipeEl);
+        //if()
+
+        console.log(data)
+
+        const randRecipe = { 
+            title:data.meals[0].strMeal,
+            description:"A fun random recipe! Click to open in YouTube",
+            url:data.meals[0].strYoutube,
+            category:"Random",
+        }; 
+
+        const recipeEl = randRecipeEl(randRecipe);
+        const group = document.getElementById(randRecipe.category);
+        group.appendChild(recipeEl);
+
+    });
 
 }
 
