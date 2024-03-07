@@ -86,7 +86,11 @@ function randomRecipe(){
     .then((response) => response.json())
     .then((data) => {
 
-        //if()
+        if(data.meals[0].strYoutube === ""){
+            console.log("random meal not clickable")
+            randomRecipe();
+            return;
+        }
 
         console.log(data)
 
