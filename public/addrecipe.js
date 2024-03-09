@@ -23,7 +23,9 @@ async function addRecipe(){
     let recipes = [];
     try{
         const response = await fetch('/api/recipes');
+        console.log(recipes);
         recipes = await response.json()
+        console.log(recipes);
 
         localStorage.setItem('recipes',JSON.stringify(recipes));
     }
@@ -49,12 +51,6 @@ async function addRecipe(){
         recipes.push(newRecipe);
         localStorage.setItem('recipes', JSON.stringify(recipes));
     }
-
-
-
-    console.log("recipes: " + recipes);
-    console.log("new recipe: " + newRecipe);
-    console.log("again");
 
     resetForm();
 }
