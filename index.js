@@ -15,16 +15,18 @@ const apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
 
-// // GetScores
-// apiRouter.get('/scores', (_req, res) => {
-//     res.send(scores);
-//   });
+// Get Recipes
+apiRouter.get('/recipes', (_req, res) => {
+  res.send(scores);
+});
   
-//   // SubmitScore
-//   apiRouter.post('/score', (req, res) => {
-//     scores = updateScores(req.body, scores);
-//     res.send(scores);
-//   });
+// New Recipe
+apiRouter.post('/newrecipe', (req, res) => {
+  console.log(typeof req.body)
+  console.log(req.body)
+  recipes.push(req.body); ////convert between types??? is req.body in json?
+  res.send(recipes);
+});
 
 
 
@@ -36,3 +38,6 @@ app.use((_req, res) => {
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
 });
+
+
+recipes = [];

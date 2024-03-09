@@ -1,5 +1,6 @@
-let r = JSON.parse(localStorage.getItem('recipe'));
-console.log(r)
+// let r = JSON.parse(localStorage.getItem('recipe'));
+// /////////////////get recipes from server
+// console.log(r)
 
 function newRecipeEl(recipe){
     const r = document.createElement('div');
@@ -40,7 +41,7 @@ function randRecipeEl(recipe){
     return r;
 }
 
-function loadRecipes(){
+async function loadRecipes(){
     let categories = ["Breakfast",
                        "Lunch",
                        "Dinner",
@@ -54,12 +55,23 @@ function loadRecipes(){
                        "Oceanic"
                     ];
 
+    ////////////////////////get recipes from the server
     let recipes = [];
-    const recipesJSON = localStorage.getItem('recipes');
-    if(recipesJSON){
-        recipes = JSON.parse(recipesJSON);
+    try{
+        const response = await fetch('/api/recipes');
+        recipes = await response.json()
+
+        localStorage.setItem('recipes',JSON.stringify(recipes));
     }
+    catch{
+        const recipesJSON = localStorage.getItem('recipes');
+        if(recipesJSON){
+            recipes = JSON.parse(recipesJSON);
+        }
+    }
+
     
+    //do I need this?
     const recipeList = document.getElementById('r-list');
 
     if(recipes.length){

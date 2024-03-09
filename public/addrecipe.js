@@ -1,4 +1,4 @@
-function addRecipe(){
+async function addRecipe(){
     const titleEl = document.getElementById('title');
     const hoursEl = document.getElementById('time-hours');
     const minEl = document.getElementById('time-min');
@@ -18,15 +18,40 @@ function addRecipe(){
         newRecipe.description = "";
     }
 
+
+    ////////////////////////get recipes from the server
     let recipes = [];
-    const recipesJSON = localStorage.getItem('recipes');
-    if(recipesJSON){
-        recipes = JSON.parse(recipesJSON);
+    try{
+        const response = await fetch('/api/recipes');
+        recipes = await response.json()
+
+        localStorage.setItem('recipes',JSON.stringify(recipes));
     }
-    recipes.push(newRecipe);
+    catch{
+        const recipesJSON = localStorage.getItem('recipes');
+        if(recipesJSON){
+            recipes = JSON.parse(recipesJSON);
+        }
+    }
+
+    ///////////////////call server endpoint to save the recipes
+    try{
+        const response = await fetch('/api/newrecipe', {
+            method: 'POST',
+            headers: {'content-type':'application.json'},
+            body: JSON.stringify(newRecipe),
+        });
+
+        const recipes = await response.json();
+        localStorage.setItem('recipes', JSON.stringify(recipes));
+    }
+    catch{
+        recipes.push(newRecipe);
+        localStorage.setItem('recipes', JSON.stringify(recipes));
+    }
 
 
-    localStorage.setItem('recipes', JSON.stringify(recipes));
+
     console.log("recipes: " + recipes);
     console.log("new recipe: " + newRecipe);
     console.log("again");
