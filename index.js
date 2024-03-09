@@ -17,7 +17,7 @@ app.use(`/api`, apiRouter);
 
 // Get Recipes
 apiRouter.get('/recipes', (_req, res) => {
-  res.send(scores);
+  res.send(recipes);
 });
   
 // New Recipe
