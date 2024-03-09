@@ -171,7 +171,7 @@ Most applications referece other servers (or services) <br/>
 the service redirects calls through port 443 to other parts of the application <br/>
 Caddy is the service that will group all of the services (gateway, hosting)
 
-## Fetch
+### Fetch
 Returns a promise <br/>
 makes HTTP requests <br/>
 an example:
@@ -226,3 +226,15 @@ Gramatical - Noun/resouce based <br/>
 Readable - human-understandable <br/>
 Simple - Single responsibility principle <br/>
 Documented - open API <br/>
+
+### Frontend Backend
+Frontend - Chrome   <br/>
+Backend - Node.js   <br/>
+talk to each other with HTTPS (if initiated by the client)   <br/>
+This is what express is for? <br/>
+Backend serves frontend files <br/>
+
+### Daemons
+if you shell into the server in virginia and then log out, everything will stop <br/>
+So the daemon is the program that runs the server (program?) while you aren't there <br/>
+
