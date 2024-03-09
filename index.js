@@ -28,8 +28,6 @@ apiRouter.get('/recipes', (_req, res) => {
   
 // New Recipe
 apiRouter.post('/newrecipe', (req, res) => {
-  console.log(typeof req.body)
-  console.log(req.body)
   recipes.push(req.body); ////convert between types??? is req.body in json?
   res.send(recipes);
 });

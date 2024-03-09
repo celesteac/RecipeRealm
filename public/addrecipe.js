@@ -23,9 +23,7 @@ async function addRecipe(){
     let recipes = [];
     try{
         const response = await fetch('/api/recipes');
-        console.log(recipes);
-        recipes = await response.json()
-        console.log(recipes);
+        recipes = await response.json();
 
         localStorage.setItem('recipes',JSON.stringify(recipes));
     }
@@ -40,11 +38,12 @@ async function addRecipe(){
     try{
         const response = await fetch('/api/newrecipe', {
             method: 'POST',
-            headers: {'content-type':'application.json'},
+            headers: {'content-type':'application/json'},
             body: JSON.stringify(newRecipe),
         });
 
         const recipes = await response.json();
+        recipes.push(newRecipe);
         localStorage.setItem('recipes', JSON.stringify(recipes));
     }
     catch{
