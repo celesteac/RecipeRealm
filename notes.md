@@ -238,3 +238,5 @@ Backend serves frontend files <br/>
 if you shell into the server in virginia and then log out, everything will stop <br/>
 So the daemon is the program that runs the server (program?) while you aren't there <br/>
 
+## Databases
+Mongo takes objects and puts them in arrays so they are searchable <br/>
