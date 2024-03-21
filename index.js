@@ -86,15 +86,33 @@ apiRouter.get('/user/:username', async (req, res) => {
   //create
   //use
   //check authentication
+var secureApiRouter = express.Router();
+apiRouter.use(secureApiRouter);
+
+secureApiRouter.use(async (req, res, next) => {
+  authToken = req.cookies[authCookieName];
+  const user = await DB.getUserByToken(authToken);
+  if (user) {
+    next();
+  } else {
+    res.status(401).send({ msg: 'Unauthorized' });
+  }
+});
+
+
 
 // Get Recipes
-apiRouter.get('/recipes', (_req, res) => {
+secureApiRouter.get('/recipes', async (_req, res) => {
+  const recipes = await DB.getRecipes();
   res.send(recipes);
 });
   
 // New Recipe
-apiRouter.post('/newrecipe', (req, res) => {
-  recipes.push(req.body); 
+secureApiRouter.post('/newrecipe', async (req, res) => {
+  const recipe = req.body;
+  await DB.addRecipe(recipe);
+  const recipes = await DB.getRecipes();
+  // recipes.push(req.body); 
   res.send(recipes);
 });
 
