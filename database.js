@@ -45,7 +45,7 @@ async function createUser(username, password){
 
 // add recipe
 function addRecipe(recipe){
-  recipesCollection.insertOne(recipe);
+  return recipesCollection.insertOne(recipe);
 }
 
 // get recipes
