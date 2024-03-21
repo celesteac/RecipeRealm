@@ -31,7 +31,7 @@ function getUserByToken(token) {
 
 // create user
 async function createUser(username, password){
-  const passwordHash = await bcrypt.hash(password, 32);
+  const passwordHash = await bcrypt.hash(password, 10);
 
   const user = {
     username : username,
