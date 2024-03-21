@@ -44,11 +44,21 @@ async function createUser(username, password){
 }
 
 // add recipe
+function addRecipe(recipe){
+  recipesCollection.insertOne(recipe);
+}
 
 // get recipes
+function getRecipes(){
+  return recipesCollection.find();
+}
 
 module.exports = {
-
+  getUser,
+  getUserByToken,
+  createUser,
+  addRecipe,
+  getRecipes,
 };
 
 
