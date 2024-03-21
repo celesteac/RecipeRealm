@@ -57,8 +57,14 @@ For this deliverable I implemented JavaScript so that the application works for 
 - **Database** - when recipe information is entered on the "add a recipe" page, and the "add recipe" button is clicked, the information is displayed on local storage and used to display the recipe on the "recipe book" page
 - **Websocket** - on the recipe book page there is a notifications panel which has a placeholder time interval function to simulate notifications from websocket about recipes being added by other users.
 - **Service** - on the "add a recipe" page there is a placeholder for a random quote from a 3rd party servce call. 
-<!--
+
 ## Service Deliverable
+- **Node.js/Express HTTP service** - done
+- **Static middleware for frontend** - done
+- **Calls to third party endpoints** - in recipebook.js I use a fetch function to get a random recipe from a 3rd party API <br/>
+- **Backend service endpoints** -  Placeholders for login that stores the current user on the server. Endpoints for storing recipes on the server and for getting stored recipes.
+- **Frontend calls service endpoints** - fetch functions in recipebook.js and addrecipe.js to the previously described endpoints
+<!--
 ## DB/Login Deliverable
 ## WebSocket Deliverable
 ## React Deliverable

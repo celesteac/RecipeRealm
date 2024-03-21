@@ -238,3 +238,18 @@ Backend serves frontend files <br/>
 if you shell into the server in virginia and then log out, everything will stop <br/>
 So the daemon is the program that runs the server (program?) while you aren't there <br/>
 
+## Databases
+Mongo takes objects and puts them in arrays so they are searchable <br/>
+
+## Authentication
+
+### Passwords
+store info in the database <br/>
+protect the password in the database <br/>
+hash algorithms put the hash values in the database, so that you don't know the original password <br/>
+
+### Cookies
+Leave crumbs on your browser to save info for the next session <br/>
+Dangerous when other websites access the info <br/>
+Your browser saves the cookies id <br/>
+The database validates the cookie and gives permissions/info <br/>
