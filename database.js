@@ -50,7 +50,7 @@ function addRecipe(recipe){
 
 // get recipes
 function getRecipes(){
-  return recipesCollection.find();
+  return recipesCollection.find().toArray();
 }
 
 module.exports = {

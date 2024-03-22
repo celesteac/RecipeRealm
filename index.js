@@ -5,24 +5,17 @@ const DB = require('./database.js');
 const app = express();
 
 const authCookieName = 'token';
+const port = process.argv.length > 2 ? process.argv[2] : 4000; // The service port. In production the frontend code is statically hosted by the service on the same port.
 
-// The service port. In production the frontend code is statically hosted by the service on the same port.
-const port = process.argv.length > 2 ? process.argv[2] : 4000;
-//  const port = 4000;
+app.use(express.json());// JSON body parsing using built-in middleware
+app.use(cookieParser());// Use the cookie parser middleware for tracking authentication tokens
+app.use(express.static('public')); // Serve up the frontend static content hosting
+app.set('trust proxy', true); // Trust headers that are forwarded from the proxy so we can determine IP addresses
 
-// JSON body parsing using built-in middleware
-app.use(express.json());
 
-// Use the cookie parser middleware for tracking authentication tokens
-app.use(cookieParser());
 
-// Serve up the frontend static content hosting
-app.use(express.static('public'));
 
-// Trust headers that are forwarded from the proxy so we can determine IP addresses
-app.set('trust proxy', true);
-
-// Router for service endpoints
+////////////////////// Router for service endpoints
 const apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
@@ -82,7 +75,7 @@ apiRouter.get('/user/:username', async (req, res) => {
 });
 
 
-//secure api router
+////////////////////////////////////////secure api router
   //create
   //use
   //check authentication
@@ -119,7 +112,7 @@ secureApiRouter.post('/newrecipe', async (req, res) => {
 
 
 
-
+///////////////////////////////////////////////////
 
 // Default error handler
 app.use(function (err, req, res, next) {
@@ -144,5 +137,3 @@ app.listen(port, () => {
     console.log(`Listening on port ${port}`);
 });
 
-
-recipes = [];
