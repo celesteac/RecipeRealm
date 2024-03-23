@@ -253,3 +253,7 @@ Leave crumbs on your browser to save info for the next session <br/>
 Dangerous when other websites access the info <br/>
 Your browser saves the cookies id <br/>
 The database validates the cookie and gives permissions/info <br/>
+
+### Websocket
+like http but goes both ways <br/>
+start with http but upgrade to websocket <br/>
