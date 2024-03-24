@@ -13,18 +13,48 @@
 
 
 function loginUser(){
-    loginOrCreate();
+    loginOrCreate(`/api/auth/login`);
 }
 
 function createUser(){
-    loginOrCreate();
+    loginOrCreate(`/api/auth/create`);
 }
 
-function loginOrCreate(){
-    const nameEl = document.querySelector("#name");
-    const passEl = document.querySelector("#password");
-    localStorage.setItem("user",nameEl.value);
-    localStorage.setItem("password",passEl.value);
+async function loginOrCreate(endpoint){
+    const name = document.querySelector("#name")?.value;
+    const password = document.querySelector("#password")?.value;
+    //gets the response object
+    //the endpoint is the parameter
+    const response = await fetch(endpoint, {
+        method: 'post', //request method
+        body: JSON.stringify({ username: name, password: password }), //req body
+        headers: { // req header
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+    });
+
+    if(response.ok){
+        console.log("we're in");
+        localStorage.setItem("user",name);
+        window.location.href = "recipebook.html";
+    }
+    else{
+        console.log("abandoned ship");
+    }
+
+        console.log("where are you?");
+}
+
+function logout() {
+    localStorage.removeItem('user');
+    // fetch(`/api/auth/logout`, {
+    //   method: 'delete',
+    // }).then(() => (window.location.href = '/'));
+    window.location.href = '/';
+}
+
+function recipeBook(){
+    window.location.href = 'recipebook.html';
 }
 
 //used to modify HTML in index.html
@@ -33,4 +63,4 @@ function setDisplay(controlId, display) {
     if (playControlEl) {
       playControlEl.style.display = display;
     }
-  }
+}
