@@ -60,6 +60,7 @@ async function loadRecipes(){
     try{
         const response = await fetch('/api/recipes');
         recipes = await response.json()
+        recipes = recipes.recipes;
 
         localStorage.setItem('recipes',JSON.stringify(recipes));
     }
@@ -70,9 +71,7 @@ async function loadRecipes(){
         }
     }
 
-    
-    //do I need this?
-    const recipeList = document.getElementById('r-list');
+    console.log(recipes.length);
 
     if(recipes.length){
         for(const recipe of recipes){
