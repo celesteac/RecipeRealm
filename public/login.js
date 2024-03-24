@@ -4,9 +4,13 @@
       document.querySelector('#username').textContent = userName;
       setDisplay('loginDialouge', 'none');
       setDisplay('authenticatedDialouge', 'block');
+      setDisplay('authenticatedItem1', 'block');
+      setDisplay('authenticatedItem2', 'block');
     } else {
       setDisplay('loginDialouge', 'block');
       setDisplay('authenticatedDialouge', 'none');
+      setDisplay('authenticatedItem1', 'none');
+      setDisplay('authenticatedItem2', 'none');
     }
 })();
 
