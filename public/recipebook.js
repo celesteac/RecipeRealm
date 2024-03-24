@@ -161,5 +161,3 @@ function addNot(){
     const notificationsContainer = document.getElementById('notifications-list');
     notificationsContainer.innerHTML = newNot.innerHTML + notificationsContainer.innerHTML;
 }
-
-// addNot();

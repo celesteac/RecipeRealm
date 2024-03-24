@@ -23,6 +23,7 @@ function createUser(){
 async function loginOrCreate(endpoint){
     const name = document.querySelector("#name")?.value;
     const password = document.querySelector("#password")?.value;
+
     //gets the response object
     //the endpoint is the parameter
     const response = await fetch(endpoint, {
@@ -34,15 +35,24 @@ async function loginOrCreate(endpoint){
     });
 
     if(response.ok){
-        console.log("we're in");
         localStorage.setItem("user",name);
         window.location.href = "recipebook.html";
     }
     else{
-        console.log("abandoned ship");
+        const body = await response.json();
+        const errorEl = getErrorEl();
+        errorEl.querySelector('#errorBody').textContent = `Error: ${body.msg}`;
+        const main = document.getElementById("main");
+        main.appendChild(errorEl);
     }
+}
 
-        console.log("where are you?");
+function getErrorEl(){
+    const el = document.createElement('div');
+    el.innerHTML  = `<div class="alert alert-primary  fade show" role="alert" id="errorDialouge">
+                        <p id="errorBody"></p>
+                    </div>`;
+    return el;
 }
 
 function logout() {
