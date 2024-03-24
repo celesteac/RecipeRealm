@@ -21,18 +21,19 @@ async function addRecipe(){
 
     ////////////////////////get recipes from the server
     let recipes = [];
-    try{
-        const response = await fetch('/api/recipes');
-        recipes = await response.json();
+    // try{
+    //     const response = await fetch('/api/recipes');
+    //     recipes = await response.json();
+    //     recipes = recipes.recipes;
 
-        localStorage.setItem('recipes',JSON.stringify(recipes));
-    }
-    catch{
-        const recipesJSON = localStorage.getItem('recipes');
-        if(recipesJSON){
-            recipes = JSON.parse(recipesJSON);
-        }
-    }
+    //     localStorage.setItem('recipes',JSON.stringify(recipes));
+    // }
+    // catch{
+    //     const recipesJSON = localStorage.getItem('recipes');
+    //     if(recipesJSON){
+    //         recipes = JSON.parse(recipesJSON);
+    //     }
+    // }
 
     ///////////////////call server endpoint to save the recipes
     try{
@@ -43,6 +44,7 @@ async function addRecipe(){
         });
 
         const recipes = await response.json();
+        recipes = recipes.recipes;
         recipes.push(newRecipe);
         localStorage.setItem('recipes', JSON.stringify(recipes));
     }
