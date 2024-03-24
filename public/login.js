@@ -49,8 +49,9 @@ async function loginOrCreate(endpoint){
 
 function getErrorEl(){
     const el = document.createElement('div');
-    el.innerHTML  = `<div class="alert alert-primary  fade show" role="alert" id="errorDialouge">
-                        <p id="errorBody"></p>
+    el.innerHTML  = `<div class="alert alert-primary alert-dismissible fade show pt-3 mt-3" role="alert" id="errorDialouge">
+                        <strong id="errorBody"></strong>
+                        <button type="button" class="btn-close btn-sm" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>`;
     return el;
 }
