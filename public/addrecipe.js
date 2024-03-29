@@ -63,3 +63,11 @@ function resetForm() {
 function backToCookbook(){
     window.location.href = "recipebook.html";
 }
+
+configureWebSocket(){
+    const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
+    const ws = new WebSocket(`${protocol}://${window.location.host}/ws`);
+    this.WebSocket.onopen = (event) => {
+        //
+    };
+}

@@ -25,6 +25,7 @@ function peerProxy(httpServer) {
         if (c.id !== connection.id) {
           c.ws.send(data);
         }
+        //TODO forward slightly differently to the sender
       });
     });
 
