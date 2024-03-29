@@ -64,10 +64,14 @@ function backToCookbook(){
     window.location.href = "recipebook.html";
 }
 
-configureWebSocket(){
+function configureWebSocket() {
     const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
     const ws = new WebSocket(`${protocol}://${window.location.host}/ws`);
-    this.WebSocket.onopen = (event) => {
-        //
+    ws.onopen = (event) => {
+        document.getElementById("wsconnection").innerText = "ws = connected!";
+        console.log("ws connected");
+        console.log(event);
     };
 }
+
+configureWebSocket();
