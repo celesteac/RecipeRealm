@@ -254,6 +254,30 @@ Dangerous when other websites access the info <br/>
 Your browser saves the cookies id <br/>
 The database validates the cookie and gives permissions/info <br/>
 
-### Websocket
+## Websockets
 like http but goes both ways <br/>
 start with http but upgrade to websocket <br/>
+
+### Details
+
+
+## React
+Components are made of html and js <br/>
+Component names have to be uppercase <br/>
+When using ReactDOM.render( <html or component>  ,... ), you cannot have more that one component at the top level <br/>
+
+### JSX
+Uses Babel to interpret into JS before rendering <br/>
+Use { } to escape from HTML into JS <br/>
+Use {{ }} to add attributes <div className="component" style={{backgroundcolor:blue}} onMouseMove={changeOutlook} />
+<p> Hello {variable} </p>
+
+### Um
+Single-page application uses components over and over again on one html page <br/>
+
+### Hooks
+UseState <br/>
+use this like the properties of your component <br/>
+const [property, setProperty] = React.useState("value") <br/>
+you can't change the property yourself, you have to call the React setProperty function (so that it doesn't re-render the DOM?) <br/>
+
