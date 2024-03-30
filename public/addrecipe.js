@@ -1,3 +1,28 @@
+////// WEBSOCKETS
+
+const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
+const ws = new WebSocket(`${protocol}://${window.location.host}/ws`);
+
+ws.onopen = (event) => {
+    document.getElementById("wsconnection").innerHTML = `<p>ws = connected!</p>`;
+    console.log("ws connected");
+};
+  
+ws.onmessage = (event) => {
+    document.getElementById("wsconnection").innerHTML += `<p>message recieved</p>`;
+    console.log("message recieved")
+}
+
+///////// OTHER FUNCTIONS
+
+const recipeForm = document.getElementById("recipeForm");
+recipeForm.onsubmit = function(event) {
+    event.preventDefault();
+    addRecipe();
+    document.getElementById('title').value = '';
+    recipeForm.reset();
+}
+
 async function addRecipe(){
     const titleEl = document.getElementById('title');
     const hoursEl = document.getElementById('time-hours');
@@ -46,32 +71,21 @@ async function addRecipe(){
         const recipes = await response.json();
         recipes = recipes.recipes;
         recipes.push(newRecipe);
-        localStorage.setItem('recipes', JSON.stringify(recipes));
+        recipesJSON = JSON.stringify(recipes);
+        localStorage.setItem('recipes', recipesJSON);
+        ws.send(recipesJSON);
     }
     catch{
         recipes.push(newRecipe);
-        localStorage.setItem('recipes', JSON.stringify(recipes));
+        recipesJSON = JSON.stringify(recipes);
+        localStorage.setItem('recipes', recipesJSON);
+        ws.send(recipesJSON);    
     }
 
-    resetForm();
-}
-
-function resetForm() {
-    document.getElementById("recipeForm").reset();
 }
 
 function backToCookbook(){
     window.location.href = "recipebook.html";
 }
 
-function configureWebSocket() {
-    const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
-    const ws = new WebSocket(`${protocol}://${window.location.host}/ws`);
-    ws.onopen = (event) => {
-        document.getElementById("wsconnection").innerText = "ws = connected!";
-        console.log("ws connected");
-        console.log(event);
-    };
-}
 
-configureWebSocket();

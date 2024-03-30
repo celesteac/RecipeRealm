@@ -22,10 +22,13 @@ function peerProxy(httpServer) {
     // Forward messages to everyone except the sender
     ws.on('message', function message(data) {   ///where is the message recieved?
       connections.forEach((c) => {
-        if (c.id !== connection.id) {
+        // if (c.id !== connection.id) {
           c.ws.send(data);
-        }
-        //TODO forward slightly differently to the sender
+        // }
+        // else{
+        //     //TODO forward slightly differently to the sender
+        //     c.ws.send(data);
+        // }
       });
     });
 
