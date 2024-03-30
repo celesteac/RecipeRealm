@@ -37,6 +37,7 @@ async function createUser(username, password){
     username : username,
     password : passwordHash,
     token : uuid.v4(),
+    notifications : [],
   };
   await userCollection.insertOne(user);
 
@@ -51,6 +52,17 @@ function addRecipe(recipe){
 // get recipes
 function getRecipes(){
   return recipesCollection.find().toArray();
+}
+
+function addNotification(notification) {
+  //attach to the user object
+  const user = getUser(notification.user);
+  user.notifications.push(notification);
+}
+
+function getNotifications(user){
+  const userObj = getUser(user);
+  return userObj.notifications;
 }
 
 module.exports = {
