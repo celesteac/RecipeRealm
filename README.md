@@ -64,8 +64,18 @@ For this deliverable I implemented JavaScript so that the application works for 
 - **Calls to third party endpoints** - in recipebook.js I use a fetch function to get a random recipe from a 3rd party API <br/>
 - **Backend service endpoints** -  Placeholders for login that stores the current user on the server. Endpoints for storing recipes on the server and for getting stored recipes.
 - **Frontend calls service endpoints** - fetch functions in recipebook.js and addrecipe.js to the previously described endpoints
-<!--
+
 ## DB/Login Deliverable
+For this deliverable I implemented user authentication and I stored the recipe data in the database.
+
+- MongoDB Atlas database created - done!
+- User registration - Creates a new account in the database.
+- existing user - recipes are stored during the session associated with the current user in the database. Username is displayed on the login page and in the navbar
+- Stores data in MongoDB - done!
+- Use MongoDB to store credentials - Stores users and recipes.
+- Restricts functionality - You cannot add or see recipes until you have logged in. This is restricted on the frontend and backend.
+  
+<!--
 ## WebSocket Deliverable
 ## React Deliverable
 -->
