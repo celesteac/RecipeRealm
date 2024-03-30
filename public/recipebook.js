@@ -1,6 +1,19 @@
-// let r = JSON.parse(localStorage.getItem('recipe'));
-// /////////////////get recipes from server
-// console.log(r)
+////// WEBSOCKETS
+
+const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
+const ws = new WebSocket(`${protocol}://${window.location.host}/ws`);
+
+ws.onopen = (event) => {
+    console.log("ws connected");
+};
+  
+ws.onmessage = async (event) => {
+    console.log("message recieved");
+    const msg = JSON.parse(await event.data.text())
+    console.log(msg);
+}
+
+////////// OTHER FUNCTIONS
 
 function newRecipeEl(recipe){
     const r = document.createElement('div');
@@ -70,8 +83,6 @@ async function loadRecipes(){
             recipes = JSON.parse(recipesJSON);
         }
     }
-
-    console.log(recipes.length);
 
     if(recipes.length){
         for(const recipe of recipes){
