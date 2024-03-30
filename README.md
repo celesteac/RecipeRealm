@@ -75,7 +75,15 @@ For this deliverable I implemented user authentication and I stored the recipe d
 - Use MongoDB to store credentials - Stores users and recipes.
 - Restricts functionality - You cannot add or see recipes until you have logged in. This is restricted on the frontend and backend.
   
-<!--
+
 ## WebSocket Deliverable
+For this deliverable I used webSocket to display notifications in the recipe book page when another user adds a recipe. <br/>
+
+- Backend listens for WebSocket connection - done!
+- Frontend makes WebSocket connection - done!
+- Data sent over WebSocket connection - done!
+- WebSocket data displayed - When a user adds a recipes from the Add Recipe page, other users see a notification in the Recipe Book Page
+
+<!--
 ## React Deliverable
 -->
