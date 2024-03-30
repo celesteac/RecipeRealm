@@ -117,7 +117,13 @@ secureApiRouter.get('/notifications', async (req, res) => {
 });
 
 //Add Notification
-
+secureApiRouter.post('/newNotification', async (req, res) => {
+  const notification = req.body;
+  await DB.addNotification(notification);
+  // const notifications = await DB.getNotifications();
+  // // recipes.push(req.body); 
+  // res.send(recipes);
+});
 
 
 ///////////////////////////////////////////////////
