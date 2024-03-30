@@ -21,14 +21,19 @@ function peerProxy(httpServer) {
 
     // Forward messages to everyone except the sender
     ws.on('message', function message(data) {   ///where is the message recieved?
+      const parsedData = JSON.parse(data);
+      const msg = {
+        username: parsedData.username,
+        title: parsedData.title,
+      }
       connections.forEach((c) => {
-        // if (c.id !== connection.id) {
-          c.ws.send(data);
-        // }
-        // else{
-        //     //TODO forward slightly differently to the sender
-        //     c.ws.send(data);
-        // }
+        if (c.id !== connection.id) {
+            c.ws.send(JSON.stringify(msg));
+        }
+        else{
+            msg.username = "You";
+            c.ws.send(JSON.stringify(msg));
+        }
       });
     });
 

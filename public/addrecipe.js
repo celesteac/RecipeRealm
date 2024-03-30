@@ -4,12 +4,10 @@ const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
 const ws = new WebSocket(`${protocol}://${window.location.host}/ws`);
 
 ws.onopen = (event) => {
-    document.getElementById("wsconnection").innerHTML = `<p>ws = connected!</p>`;
     console.log("ws connected");
 };
   
 ws.onmessage = (event) => {
-    document.getElementById("wsconnection").innerHTML += `<p>message recieved</p>`;
     console.log("message recieved")
 }
 
