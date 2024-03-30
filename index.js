@@ -110,6 +110,13 @@ secureApiRouter.post('/newrecipe', async (req, res) => {
   res.send(recipes);
 });
 
+//Get Notifications
+secureApiRouter.get('/notifications', async (req, res) => {
+  const notifications = await DB.getNotifications(req.body.user);
+  res.send({notifications});
+});
+
+//Add Notification
 
 
 

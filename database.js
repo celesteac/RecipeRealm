@@ -60,8 +60,8 @@ function addNotification(notification) {
   user.notifications.push(notification);
 }
 
-function getNotifications(user){
-  const userObj = getUser(user);
+function getNotifications(username){
+  const userObj = getUser(username);
   return userObj.notifications;
 }
 
