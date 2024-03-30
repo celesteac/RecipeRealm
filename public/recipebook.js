@@ -6,12 +6,6 @@ const ws = new WebSocket(`${protocol}://${window.location.host}/ws`);
 ws.onopen = (event) => {
     console.log("ws connected");
 };
-  
-ws.onmessage = async (event) => {
-    console.log("message recieved");
-    const msg = JSON.parse(await event.data.text())
-    console.log(msg);
-}
 
 ////////// OTHER FUNCTIONS
 
@@ -138,14 +132,6 @@ loadRecipes();
 
 
 
-
-
-
-
-
-
-
-
 /////////////    NOTIFICATIONS PANEL     ///////////////
 function newNotification(user="John", recipe="Yummy Recipe", time="15 min"){
     newN = document.createElement("div");
@@ -158,16 +144,22 @@ function newNotification(user="John", recipe="Yummy Recipe", time="15 min"){
 
 }
 
-setInterval(()=>{
-    const newNot = newNotification("Sabrina","Sourdough","1 hour");
+ws.onmessage = async (event) => {
+    console.log("message recieved");
+    const msg = JSON.parse(await event.data.text())
+    const r = msg[0];
+    console.log(r);
 
+    const newNot = newNotification(r.user, r.title);
     const notificationsContainer = document.getElementById('notifications-list');
-    notificationsContainer.innerHTML = newNot.innerHTML + notificationsContainer.innerHTML;
-},3000);
-
-function addNot(){
-    const newNot = newNotification("Sabrina","Sourdough","1 hour");
-
-    const notificationsContainer = document.getElementById('notifications-list');
-    notificationsContainer.innerHTML = newNot.innerHTML + notificationsContainer.innerHTML;
+    notificationsContainer.innerHTML = newNot.innerHTML + notificationsContainer.innerHTML;    
 }
+
+// setInterval(()=>{
+//     const newNot = newNotification("Sabrina","Sourdough","1 hour");
+
+//     const notificationsContainer = document.getElementById('notifications-list');
+//     notificationsContainer.innerHTML = newNot.innerHTML + notificationsContainer.innerHTML;
+// },3000);
+
+
