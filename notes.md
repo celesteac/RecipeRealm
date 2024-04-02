@@ -272,12 +272,17 @@ Use { } to escape from HTML into JS <br/>
 Use {{ }} to add attributes <div className="component" style={{backgroundcolor:blue}} onMouseMove={changeOutlook} />
 <p> Hello {variable} </p>
 
-### Um
-Single-page application uses components over and over again on one html page <br/>
-
 ### Hooks
 UseState <br/>
 use this like the properties of your component <br/>
 const [property, setProperty] = React.useState("value") <br/>
 you can't change the property yourself, you have to call the React setProperty function (so that it doesn't re-render the DOM?) <br/>
 
+### Single-Page Applications
+Single-page application uses components over and over again on one html page <br/>
+Use the react <Routes>
+
+### Toolchain
+Runs several scripts in a pipeline to run multiple tools on the code before it can be deployed <br/>
+We have introduced complexity in the code in order to have better tools <br/>
+Build and production toolchains are different? <br/>
