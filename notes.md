@@ -272,17 +272,56 @@ Use { } to escape from HTML into JS <br/>
 Use {{ }} to add attributes <div className="component" style={{backgroundcolor:blue}} onMouseMove={changeOutlook} />
 <p> Hello {variable} </p>
 
-### Hooks
-UseState <br/>
-use this like the properties of your component <br/>
-const [property, setProperty] = React.useState("value") <br/>
-you can't change the property yourself, you have to call the React setProperty function (so that it doesn't re-render the DOM?) <br/>
-
 ### Single-Page Applications
 Single-page application uses components over and over again on one html page <br/>
 Use the react <Routes>
 
 ### Toolchain
 Runs several scripts in a pipeline to run multiple tools on the code before it can be deployed <br/>
-We have introduced complexity in the code in order to have better tools <br/>
+We have introduced complexity in the code to have better tools <br/>
 Build and production toolchains are different? <br/>
+
+### Reactivity
+Properties to components (passed in) <br/>
+State on components (internal variables) <br/>
+
+### Hooks
+UseState <br/>
+use this like the properties of your component <br/>
+const [property, setProperty] = React.useState("value") <br/>
+you can't change the property yourself, you have to call the React setProperty function (so that it doesn't re-render the DOM?) <br/>
+Hooks can ONLY be in the top level of a component <br/>
+
+### Use State
+use state returns two things [state, updateState] <br/>
+the state variable it returns is a reference to (or a copy of?) another place where it is storing that variable <br/>
+If you want to update it, use the updateState function that it has returned. React needs to know to conditionally rerender the page everywhere you used the variable <br/>
+Be careful about logging the state values after they are updated because it will probably display the old values (something to do with promises and react handling the updateState) <br/>
+<br/>
+Passing down state from parent to child is important <br/>
+In order to pass information back up, use a callback function <br/>
+
+### Use Effect
+does something whenever a certain state changes <br/>
+The first function gets called whenever the component rerenders <br/>
+The renrendering happens whenver the state changes <br/>
+Before rendering, it checks to make sure that any awaits that it depends on have finished <br/>
+<br/>
+The return function happens at the end of the lifetime of the component <br/>
+aka when the component rerenders, _before_ it renders again, it will call the return (cleanup) function <br/>
+```
+  React.useEffect(() => {
+    console.log('rendered');
+
+    return function cleanup() {
+      console.log('cleanup');
+    };
+  });
+```
+You can also provide a parameter which is an array of states that we want the effect to react to <br/>
+The useEffect will always happen the first time the component loads, no matter the states in the array, so an empty array as a parameter will only call the effect the frist time the component loads <br/>
+```
+  React.useEffect(() => {
+    console.log(`count1 effect triggered ${count1}`);
+  }, [count1]);
+```
