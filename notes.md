@@ -325,3 +325,11 @@ The useEffect will always happen the first time the component loads, no matter t
     console.log(`count1 effect triggered ${count1}`);
   }, [count1]);
 ```
+## Useful Things
+### Typescript
+It is useful <br/>
+Interfaces, Unions, might be worth it <br/>
+
+### Performance Monitoring
+
+Lighthouse, Network, throttling, minify and compress, etc <br/>
