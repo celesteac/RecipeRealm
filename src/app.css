@@ -1,0 +1,38 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    min-width: 375px;
+}
+
+header {
+    flex: 0 80px;
+}
+
+main{
+    flex: 1 calc(100vh - 120px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    flex: 0 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+body {
+    background-image: url('FoodPicture.jpg');
+    background-size: cover;
+    background-position: center;
+    /* opacity: .5; */
+    /* transform: scaleX(-1); */
+}
