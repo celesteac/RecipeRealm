@@ -10,7 +10,7 @@ const port = process.argv.length > 2 ? process.argv[2] : 4000; // The service po
 
 app.use(express.json());// JSON body parsing using built-in middleware
 app.use(cookieParser());// Use the cookie parser middleware for tracking authentication tokens
-app.use(express.static('public')); // Serve up the frontend static content hosting
+app.use(express.static('../public')); // Serve up the frontend static content hosting
 app.set('trust proxy', true); // Trust headers that are forwarded from the proxy so we can determine IP addresses
 
 
@@ -135,7 +135,7 @@ app.use(function (err, req, res, next) {
 
 // Return the application's default page if the path is unknown
 app.use((_req, res) => {
-    res.sendFile('index.html', { root: 'public' });
+    res.sendFile('index.html', { root: '../public' });
 });
 
 // setAuthCookie in the HTTP response
