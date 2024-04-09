@@ -29,10 +29,12 @@ footer p {
     margin: 0;
 }
 
-body {
-    background-image: url('FoodPicture.jpg');
+body { 
+    /* background-image: url('brownFoodPic.jpg');  */
+    background-image: url('FoodPicture.jpg'); 
     background-size: cover;
     background-position: center;
+    /* don't need these ones?
     /* opacity: .5; */
     /* transform: scaleX(-1); */
-}
+ }
