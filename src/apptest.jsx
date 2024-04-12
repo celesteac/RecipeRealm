@@ -16,9 +16,9 @@ export default function App() {
           <span style={{fontSize: "30px"}} className="navbar-brand ms-4">Recipe Realm</span>
           <div className="container-fluid">
               <ul className="navbar-nav">
-                  <li className="nav-item"><NavLink className="nav-link active" to="login">Login</NavLink></li>
-                  <li className="nav-item" id="authenticatedItem1" style={{display: "none"}}><NavLink className="recipebook" to="recipebook.html">Recipe Book</NavLink></li>
-                  <li className="nav-item" id="authenticatedItem2" style={{display: "none"}}><NavLink className="recipebook" to="addrecipe.html">Add a Recipe</NavLink></li>
+                  <li className="nav-item"><NavLink className="nav-link active" to="login">Login TEst</NavLink></li>
+                  <li className="nav-item" id="authenticatedItem1" ><NavLink className="nav-link" to="/recipebook">Recipe Book</NavLink></li>
+                  <li className="nav-item" id="authenticatedItem2" ><NavLink className="nav-link" to="/addrecipe">Add a Recipe</NavLink></li>
               </ul>
           </div>
           <div className="pe-5">
@@ -45,5 +45,5 @@ export default function App() {
 }
 
 function NotFound() {
-  return <main className='container-fluid text-center'><strong>404: Return to sender. Address unknown.</strong></main>;
+  return <main className='container-fluid text-center'>404: Return to sender. Address unknown.</main>;
 }
