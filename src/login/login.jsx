@@ -1,6 +1,9 @@
 import React from 'react';
+// import { Unauthenticated } from './unauthenticated';
+import { Authenticated } from './authenticated';
+import { AuthState } from './authState';
 
-export function Login() {
+export function Login(props) {
 
   function loginUser(){
     console.log("logging in");
@@ -24,14 +27,14 @@ export function Login() {
                     <span className="input-group-text">Password</span>
                     <input id="password" type="password" placeholder="Password" className="form-control" />
                 </div>
-                    <button className="btn btn-sm btn-outline-primary" onclick="loginUser()">Login</button>
-                    <button className="btn btn-sm btn-outline-primary" onclick="createUser()">Create</button>
+                    <button className="btn btn-sm btn-outline-primary" onClick="loginUser()">Login</button>
+                    <button className="btn btn-sm btn-outline-primary" onClick="createUser()">Create</button>
             </div>
-            <div id="authenticatedDialouge" className="px-5 pb-4" style={{display: "none;"}}>
-                <p id="username" className="pb-1 lead">name</p>
-                <button className="btn btn-sm btn-outline-primary" onclick="logout()">Logout</button>
-                <button className="btn btn-sm btn-outline-primary" onclick="recipeBook()">Recipe Book</button>
-            </div>
+            {props.authState === Authenticated && (
+              <Authenticated username={props.username} onLogout={(loginUserName)=>{ 
+                props.onAuthChange(loginUserName, AuthState.Authenticated)
+              }}/>
+            )}
         </div>
 
     </main>

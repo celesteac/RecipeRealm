@@ -3,10 +3,16 @@ import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
 import { Login } from './login/login';
 import { AddRecipe } from './addrecipe/addrecipe';
 import { RecipeBook } from './recipebook/recipebook';
+import { AuthState } from './login/authState';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
 
 export default function App() {
+  
+  const [userName, setUserName] = React.useState(localStorage.getItem('userName') || '');
+  const currentAuthState = userName ? AuthState.Authenticated : AuthState.Unauthenticated;
+  const [authState, setAuthState] = React.useState(currentAuthState);
+
   return (
 
 <BrowserRouter>
@@ -17,8 +23,12 @@ export default function App() {
           <div className="container-fluid">
               <ul className="navbar-nav">
                   <li className="nav-item"><NavLink className="nav-link active" to="">Login</NavLink></li>
-                  <li className="nav-item" id="authenticatedItem1" style={{display: "none"}}><NavLink className="recipebook" to="recipebook.html">Recipe Book</NavLink></li>
-                  <li className="nav-item" id="authenticatedItem2" style={{display: "none"}}><NavLink className="recipebook" to="addrecipe.html">Add a Recipe</NavLink></li>
+                  {authState === AuthState.Authenticated && (
+                  <li className="nav-item" id="authenticatedItem1" ><NavLink className="nav-link" to="recipebook">Recipe Book</NavLink></li>
+                  )}
+                  {authState === AuthState.Authenticated && (
+                  <li className="nav-item" id="authenticatedItem2" ><NavLink className="nav-link" to="addrecipe">Add a Recipe</NavLink></li>
+                  )}
               </ul>
           </div>
           <div className="pe-5">
@@ -29,7 +39,14 @@ export default function App() {
   </header>
 
 <Routes>
-  <Route path='/' element={<Login/>} exact />
+  <Route path='/' element={<Login
+                  userName={userName}
+                  authState={authState}
+                  onAuthChange={(userName, authState) => {
+                    setAuthState(authState);
+                    setUserName(userName);
+                  }}
+              />} exact />
   <Route path='/recipebook' element={<RecipeBook/>}  />
   <Route path='/addrecipe' element={<AddRecipe/>}  />
   <Route path='*' element={<NotFound />} />

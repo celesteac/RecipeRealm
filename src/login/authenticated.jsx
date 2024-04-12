@@ -1,9 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-
-
-
 export function Authenticated(props) {
     const navigate = useNavigate();
   
@@ -22,14 +19,10 @@ export function Authenticated(props) {
     }
   
     return (
-      <div>
-        <div className='playerName'>{props.userName}</div>
-        <Button variant='primary' onClick={() => navigate('/play')}>
-          Play
-        </Button>
-        <Button variant='secondary' onClick={() => logout()}>
-          Logout
-        </Button>
-      </div>
+    <div id="authenticatedDialouge" className="px-5 pb-4">
+        <p id="username" className="pb-1 lead">name</p>
+        <button className="btn btn-sm btn-outline-primary" onClick="logout()">Logout</button>
+        <button className="btn btn-sm btn-outline-primary" onClick="recipeBook()">Recipe Book</button>
+    </div>
     );
   }
