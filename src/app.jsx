@@ -33,7 +33,7 @@ export default function App() {
               </div>
               <div className="pe-5">
                   <strong>User:</strong>
-                  <span id="userdisplay"></span>
+                  <span id="userdisplay"> {username}</span>
               </div>
           </nav>
       </header>

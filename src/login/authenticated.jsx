@@ -12,15 +12,15 @@ export function Authenticated({username, onLogout}) {
           // Logout failed. Assuming offline
         })
         .finally(() => {
-          localStorage.removeItem('userName');
-          props.onLogout();
+          localStorage.removeItem('username');
+          onLogout();
         });
 
     }
   
     return (
     <div id="authenticatedDialouge" className="px-5 pb-4">
-        <p id="username" className="pb-1 lead">name</p>
+        <p id="username" className="pb-1 lead">{username}</p>
         <button className="btn btn-sm btn-outline-primary" onClick={() => logout()}>Logout</button>
         <button className="btn btn-sm btn-outline-primary" onClick={() => navigate('/recipebook')}>Recipe Book</button>
     </div>
