@@ -2,8 +2,11 @@ import React from 'react';
 import { Authenticated } from './authenticated';
 import { AuthState } from './authState';
 import { Unauthenticated } from './unauthenticated';
+import {MessageDialog} from './messageDialog';
+
 
 export function Login({username, authState, onAuthChange }) {
+  const [displayError, setDisplayError] = React.useState(null);
 
   return (
     <main className="container-fluid text-center" id="main">
@@ -14,8 +17,12 @@ export function Login({username, authState, onAuthChange }) {
               < Unauthenticated 
                 username={username} 
                 onLogin={(loginUsername)=>{ 
-                onAuthChange(loginUsername, AuthState.Authenticated)
-              }} />
+                  onAuthChange(loginUsername, AuthState.Authenticated)
+                }}
+                onError={(message)=>{
+                  setDisplayError(message);
+                }} 
+              />
             )}
 
             {authState === AuthState.Authenticated && (
@@ -27,6 +34,11 @@ export function Login({username, authState, onAuthChange }) {
             )}
 
         </div>
+
+        {authState === AuthState.Unauthenticated && (<MessageDialog 
+              message={displayError} 
+              onHide={() => setDisplayError(null)} 
+            />)}
 
     </main>
   );

@@ -1,12 +1,10 @@
 import React from 'react';
 
 // import Button from 'react-bootstrap/Button';
-// import {MessageDialog} from './messageDialog';
 
-export function Unauthenticated({userNameProps, onLogin}) {
+export function Unauthenticated({userNameProps, onLogin, onError}) {
   const [username, setUsername] = React.useState(userNameProps);
   const [password, setPassword] = React.useState('');
-  const [displayError, setDisplayError] = React.useState(null);
 
   async function loginUser() {
     console.log("entered1");
@@ -33,7 +31,8 @@ export function Unauthenticated({userNameProps, onLogin}) {
     } else {
         console.log("entered3.2");
         const body = await response.json();
-        setDisplayError(`Error: ${body.msg}`);
+        const displayError = `Error: ${body.msg}`;
+        onError(displayError);
     }
   }
 

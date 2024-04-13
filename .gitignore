@@ -1,6 +1,3 @@
 node_modules/
-simon-css/
-simon-html/
-simon-javascript/
-simon-service/
+simon-react/
 dbConfig.json
