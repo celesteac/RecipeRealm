@@ -12,7 +12,7 @@ export function Authenticated({username, onLogout}) {
           // Logout failed. Assuming offline
         })
         .finally(() => {
-          localStorage.removeItem('username');
+          localStorage.removeItem('user');
           onLogout();
         });
 

@@ -29,7 +29,7 @@ export function Login({username, authState, onAuthChange }) {
               <Authenticated 
                 username={username} 
                 onLogout={()=>{ 
-                onAuthChange(username, AuthState.Unauthenticated)
+                onAuthChange("", AuthState.Unauthenticated)
               }}/>
             )}
 
