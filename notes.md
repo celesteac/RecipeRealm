@@ -7,6 +7,7 @@ My startup IP address http://23.23.184.165/
 Use git fetch to see changes on github without downloading them <br />
 Use git status to see if the local repo is up to date with github
 
+
 ## AWS notes
 Use git bash or Mingw to ssh into the server. <br />
 Use the command  ```ssh -i [key pair file] ubuntu@[ip address]``` <br />
@@ -37,6 +38,10 @@ Caddy does 3 important things
 2. serves up static HTML files
 3. gateway for subdomain requests
 
+## Ports
+80 HTTP <br/>
+443 https <br/>
+20? ssh <br/>
 ## Console Notes
 sudo is to use as a super user <br/>
 ls is list <br/>
@@ -215,11 +220,17 @@ app.get('*', (req, res) => {
 app.listen(3000);
 ```
 
+Some HTTP headers: <br/>
+Cookie, content-type, host <br/>
+
 ### Middleware
 Each express app.function() is a piece of middleware for handling different HTTP requests <br/>
 next() will call the next valid funciton in the express code <br/>
 Eventually there must be a response in the next change <br/>
 oRdEr MaTtErS <br/>
+```
+app.method(/path, ()=>{}) <br/>
+```
 
 ### Endpoint design
 Gramatical - Noun/resouce based <br/>
@@ -237,6 +248,7 @@ Backend serves frontend files <br/>
 ### Daemons
 if you shell into the server in virginia and then log out, everything will stop <br/>
 So the daemon is the program that runs the server (program?) while you aren't there <br/>
+CAN fork other processes <br/>
 
 ## Databases
 Mongo takes objects and puts them in arrays so they are searchable <br/>
@@ -257,6 +269,7 @@ The database validates the cookie and gives permissions/info <br/>
 ## Websockets
 like http but goes both ways <br/>
 start with http but upgrade to websocket <br/>
+peer to peer = the server and client are peers (not browser to browser) <br/>
 
 ### Details
 
