@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
-import WS from './addrecipeWS';
-import React, { useEffect } from 'react';
+// import WS from './addrecipeWS';
+import React from 'react';
+//, { useEffect }
 
 export function AddRecipe() {
   const navigate = useNavigate();
@@ -21,44 +22,47 @@ export function AddRecipe() {
     setInputs(values => ({...values, [name]: value}))
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log({inputs});
-    uploadRecipe()
-    console.log(localStorage.getItem('recipes'));
+    // console.log({inputs});
+    await uploadRecipe()
+    // console.log(localStorage.getItem('recipes'));
     setInputs(initialInput);
   }
 
   async function uploadRecipe(){
-    let recipes = [];
+    // let recipes = [];
     let newRecipe = inputs;
     try{
-      const response = await fetch('http://localhost:4000/api/newrecipe', {
+      const response = await fetch('/api/newrecipe', {
           method: 'post',
           headers: {'Content-type':'application/json; charset=UTF-8',},
           body: JSON.stringify(newRecipe),
       });
 
       let recipes = await response.json();
-      recipes = recipes.recipes;
+      // recipes = recipes.recipes;
+      // console.log({recipes});
       recipes.push(newRecipe);
-      recipesJSON = JSON.stringify(recipes);
+      let recipesJSON = JSON.stringify(recipes);
       localStorage.setItem('recipes', recipesJSON);
-      ws.send(recipesJSON);
+      // ws.send(recipesJSON);
+      // console.log("try");
     }
     catch{
-      recipes.push(newRecipe);
-      recipesJSON = JSON.stringify(recipes);
-      localStorage.setItem('recipes', recipesJSON);
-      ws.send(recipesJSON);    
+      // recipes.push(newRecipe);
+      // let recipesJSON = JSON.stringify(recipes);
+      // localStorage.setItem('recipes', recipesJSON);
+      // ws.send(recipesJSON);    
+      console.log("catch");
     }    
   }
 
 
 
-  useEffect(() => {
-    WS();
-  }, []);
+  // useEffect(() => {
+  //   WS();
+  // }, []);
 
   
   return (

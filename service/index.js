@@ -8,22 +8,22 @@ const { peerProxy } = require('./peerProxy.js');
 const authCookieName = 'token';
 const port = process.argv.length > 2 ? process.argv[2] : 4000; // The service port. In production the frontend code is statically hosted by the service on the same port.
 
+// const cors = require('cors');
+// const options = {
+//   origin: 'http://localhost:5173',
+// }
+// app.use(cors(options));
+// app.use((req, res, next) => {
+//   res.header('Access-Control-Allow-Origin', '*');
+//   res.header('Access-Control-Allow-Headers', 'privatekey, Origin, X-Requested-With, Content-Type, Accept');
+//   next();
+// });
+
 app.use(express.json());// JSON body parsing using built-in middleware
 app.use(cookieParser());// Use the cookie parser middleware for tracking authentication tokens
 app.use(express.static('../public')); // Serve up the frontend static content hosting
 app.set('trust proxy', true); // Trust headers that are forwarded from the proxy so we can determine IP addresses
 
-
-const cors = require('cors');
-const options = {
-  origin: 'http://localhost:5173',
-}
-app.use(cors(options));
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Headers', 'privatekey, Origin, X-Requested-With, Content-Type, Accept');
-  next();
-});
 ////////////////////// Router for service endpoints
 const apiRouter = express.Router();
 app.use(`/api`, apiRouter);
