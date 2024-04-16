@@ -84,6 +84,12 @@ For this deliverable I used webSocket to display notifications in the recipe boo
 - Data sent over WebSocket connection - done!
 - WebSocket data displayed - When a user adds a recipes from the Add Recipe page, other users see a notification in the Recipe Book Page
 
-<!--
+
 ## React Deliverable
--->
+For this deliverable, I converted the application over to use React. <br/>
+Note: the Recipe Book page is not fully functional and has placeholder sub-components. The other pages, Login and Add Recipe, are fully functional. 
+
+- Bundled and transpiled - done!
+- Components - Login, the Recipe Book page, the recipe list, the notifications panel, and the Add Recipe page list are all components.
+- Router - Routing between login, Recipe Book, and Add Recipe components.
+- Hooks - Used useState in app.jsx, login.jsx, and addrecipe.jsx, as well as useNavigate in authenticated.jsx and addrecipe.jsx
