@@ -1,6 +1,7 @@
 import React from 'react';
 import RecipesPanel from './recipesPanel';
 import NotificationsPanel from './notificationsPanel';
+import './recipebook.css'
 
 export function RecipeBook() {
   return (
