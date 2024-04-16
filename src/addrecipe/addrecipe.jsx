@@ -1,9 +1,18 @@
 import { useNavigate } from 'react-router-dom';
-import WS from './addecipeWS';
-import React from 'react';
+import WS from './addrecipeWS';
+import React, { useEffect } from 'react';
 
 export function AddRecipe() {
-  const [inputs, setInputs] = React.useState({category:"Breakfast"});
+  const navigate = useNavigate();
+  const initialInput = {
+    title: "",
+    hours: 0,
+    minutes: 0,
+    description: "",
+    url: "",
+    category: "Breakfast",
+  }
+  const [inputs, setInputs] = React.useState(initialInput);
 
   const handleChange = (event) => {
     const name = event.target.name;
@@ -14,10 +23,12 @@ export function AddRecipe() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log({inputs});
+    setInputs(initialInput);
   }
 
-
-  WS();
+  useEffect(() => {
+    WS();
+  }, []);
 
   
   return (
