@@ -14,8 +14,16 @@ app.use(express.static('../public')); // Serve up the frontend static content ho
 app.set('trust proxy', true); // Trust headers that are forwarded from the proxy so we can determine IP addresses
 
 
-
-
+const cors = require('cors');
+const options = {
+  origin: 'http://localhost:5173',
+}
+app.use(cors(options));
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'privatekey, Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
 ////////////////////// Router for service endpoints
 const apiRouter = express.Router();
 app.use(`/api`, apiRouter);

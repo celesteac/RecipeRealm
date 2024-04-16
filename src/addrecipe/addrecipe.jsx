@@ -11,6 +11,7 @@ export function AddRecipe() {
     description: "",
     url: "",
     category: "Breakfast",
+    user:localStorage.getItem('user'),
   }
   const [inputs, setInputs] = React.useState(initialInput);
 
@@ -23,8 +24,37 @@ export function AddRecipe() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log({inputs});
+    uploadRecipe()
+    console.log(localStorage.getItem('recipes'));
     setInputs(initialInput);
   }
+
+  async function uploadRecipe(){
+    let recipes = [];
+    let newRecipe = inputs;
+    try{
+      const response = await fetch('http://localhost:4000/api/newrecipe', {
+          method: 'post',
+          headers: {'Content-type':'application/json; charset=UTF-8',},
+          body: JSON.stringify(newRecipe),
+      });
+
+      let recipes = await response.json();
+      recipes = recipes.recipes;
+      recipes.push(newRecipe);
+      recipesJSON = JSON.stringify(recipes);
+      localStorage.setItem('recipes', recipesJSON);
+      ws.send(recipesJSON);
+    }
+    catch{
+      recipes.push(newRecipe);
+      recipesJSON = JSON.stringify(recipes);
+      localStorage.setItem('recipes', recipesJSON);
+      ws.send(recipesJSON);    
+    }    
+  }
+
+
 
   useEffect(() => {
     WS();
