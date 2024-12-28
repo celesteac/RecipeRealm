@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 // import WS from './addrecipeWS';
 import React from 'react';
-//, { useEffect }
 
 export function AddRecipe() {
   const navigate = useNavigate();
@@ -41,13 +40,10 @@ export function AddRecipe() {
       });
 
       let recipes = await response.json();
-      // recipes = recipes.recipes;
-      // console.log({recipes});
       recipes.push(newRecipe);
       let recipesJSON = JSON.stringify(recipes);
       localStorage.setItem('recipes', recipesJSON);
       // ws.send(recipesJSON);
-      // console.log("try");
     }
     catch{
       // recipes.push(newRecipe);

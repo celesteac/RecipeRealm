@@ -62,7 +62,7 @@ async function loadRecipes(){
                        "Oceanic"
                     ];
 
-    ////////////////////////get recipes from the server
+    ///get recipes from the server
     let recipes = [];
     try{
         const response = await fetch('/api/recipes');
@@ -127,7 +127,7 @@ function randomRecipe(){
 
 randomRecipe();
 
-loadRecipes();
+await loadRecipes();
 
 
 

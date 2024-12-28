@@ -27,7 +27,7 @@ export function EmptyRecipe() {
     );
 }
 
-export function RandomRecipe(recipe) {
+export function RandomRecipe({recipe}) {
     return (
         <div className="col-sm-12 card mt-2" id="item">
             <div className="card-body d-flex flex-row justify-content-around align-items-center">
